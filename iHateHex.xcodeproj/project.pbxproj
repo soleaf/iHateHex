@@ -18,13 +18,6 @@
 		F717E85F187FE5E5007EF344 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F717E83E187FE5E5007EF344 /* Cocoa.framework */; };
 		F717E867187FE5E5007EF344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F717E865187FE5E5007EF344 /* InfoPlist.strings */; };
 		F717E869187FE5E5007EF344 /* iHateHexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E868187FE5E5007EF344 /* iHateHexTests.m */; };
-		F717E886187FEDD5007EF344 /* AXStatusItemPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E885187FEDD5007EF344 /* AXStatusItemPopup.m */; };
-		F717E88D187FEE29007EF344 /* MenuPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E88B187FEE29007EF344 /* MenuPopUpViewController.m */; };
-		F717E88E187FEE29007EF344 /* MenuPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F717E88C187FEE29007EF344 /* MenuPopUpViewController.xib */; };
-		F717E893187FEE73007EF344 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = F717E88F187FEE73007EF344 /* cloud.png */; };
-		F717E894187FEE73007EF344 /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F717E890187FEE73007EF344 /* cloud@2x.png */; };
-		F717E895187FEE73007EF344 /* cloudgrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F717E891187FEE73007EF344 /* cloudgrey.png */; };
-		F717E896187FEE73007EF344 /* cloudgrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F717E892187FEE73007EF344 /* cloudgrey@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +50,6 @@
 		F717E864187FE5E5007EF344 /* iHateHexTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHateHexTests-Info.plist"; sourceTree = "<group>"; };
 		F717E866187FE5E5007EF344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F717E868187FE5E5007EF344 /* iHateHexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHateHexTests.m; sourceTree = "<group>"; };
-		F717E884187FEDD5007EF344 /* AXStatusItemPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXStatusItemPopup.h; sourceTree = "<group>"; };
-		F717E885187FEDD5007EF344 /* AXStatusItemPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXStatusItemPopup.m; sourceTree = "<group>"; };
-		F717E88A187FEE29007EF344 /* MenuPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPopUpViewController.h; sourceTree = "<group>"; };
-		F717E88B187FEE29007EF344 /* MenuPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuPopUpViewController.m; sourceTree = "<group>"; };
-		F717E88C187FEE29007EF344 /* MenuPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuPopUpViewController.xib; sourceTree = "<group>"; };
-		F717E88F187FEE73007EF344 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
-		F717E890187FEE73007EF344 /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
-		F717E891187FEE73007EF344 /* cloudgrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudgrey.png; sourceTree = "<group>"; };
-		F717E892187FEE73007EF344 /* cloudgrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloudgrey@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,17 +115,9 @@
 		F717E844187FE5E5007EF344 /* iHateHex */ = {
 			isa = PBXGroup;
 			children = (
-				F717E883187FEDD5007EF344 /* AXStatusItemPopup */,
 				F717E850187FE5E5007EF344 /* AppDelegate.h */,
 				F717E851187FE5E5007EF344 /* AppDelegate.m */,
 				F717E853187FE5E5007EF344 /* MainMenu.xib */,
-				F717E88A187FEE29007EF344 /* MenuPopUpViewController.h */,
-				F717E88B187FEE29007EF344 /* MenuPopUpViewController.m */,
-				F717E88C187FEE29007EF344 /* MenuPopUpViewController.xib */,
-				F717E88F187FEE73007EF344 /* cloud.png */,
-				F717E890187FEE73007EF344 /* cloud@2x.png */,
-				F717E891187FEE73007EF344 /* cloudgrey.png */,
-				F717E892187FEE73007EF344 /* cloudgrey@2x.png */,
 				F717E856187FE5E5007EF344 /* Images.xcassets */,
 				F717E845187FE5E5007EF344 /* Supporting Files */,
 			);
@@ -176,15 +152,6 @@
 				F717E865187FE5E5007EF344 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F717E883187FEDD5007EF344 /* AXStatusItemPopup */ = {
-			isa = PBXGroup;
-			children = (
-				F717E884187FEDD5007EF344 /* AXStatusItemPopup.h */,
-				F717E885187FEDD5007EF344 /* AXStatusItemPopup.m */,
-			);
-			path = AXStatusItemPopup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,12 +232,7 @@
 			files = (
 				F717E849187FE5E5007EF344 /* InfoPlist.strings in Resources */,
 				F717E857187FE5E5007EF344 /* Images.xcassets in Resources */,
-				F717E896187FEE73007EF344 /* cloudgrey@2x.png in Resources */,
-				F717E88E187FEE29007EF344 /* MenuPopUpViewController.xib in Resources */,
-				F717E893187FEE73007EF344 /* cloud.png in Resources */,
-				F717E894187FEE73007EF344 /* cloud@2x.png in Resources */,
 				F717E84F187FE5E5007EF344 /* Credits.rtf in Resources */,
-				F717E895187FEE73007EF344 /* cloudgrey.png in Resources */,
 				F717E855187FE5E5007EF344 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,9 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F717E88D187FEE29007EF344 /* MenuPopUpViewController.m in Sources */,
 				F717E852187FE5E5007EF344 /* AppDelegate.m in Sources */,
-				F717E886187FEDD5007EF344 /* AXStatusItemPopup.m in Sources */,
 				F717E84B187FE5E5007EF344 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
