@@ -1,0 +1,13 @@
+PODS:
+  - BFColorPickerPopover (0.0.1)
+  - SNRHUDKit (0.0.1)
+
+DEPENDENCIES:
+  - BFColorPickerPopover (~> 0.0.1)
+  - SNRHUDKit (~> 0.0.1)
+
+SPEC CHECKSUMS:
+  BFColorPickerPopover: 909ab85fb9852b2446d36fc80759295400ea8ecd
+  SNRHUDKit: 3d1c2aecd936d01f38121ebfb6f11e208b3a4ced
+
+COCOAPODS: 0.27.1

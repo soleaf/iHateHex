@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B94E20E4-967B-4910-9086-2D451DD0A517</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iHateHex</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>018AC2C7-679D-4151-B65F-B9BB2744A521</key>
+		<string>https://github.com/soleaf/iHateHex.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iHateHex.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>018AC2C7-679D-4151-B65F-B9BB2744A521</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/soleaf/iHateHex.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>018AC2C7-679D-4151-B65F-B9BB2744A521</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>018AC2C7-679D-4151-B65F-B9BB2744A521</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iHateHex</string>
+		</dict>
+	</array>
+</dict>
+</plist>
