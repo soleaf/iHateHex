@@ -170,7 +170,8 @@
     return NSMakeSize(width, height);
 }
 
-- (NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize {
+- (NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize
+{
     NSImage *sourceImage = anImage;
     [sourceImage setScalesWhenResized:YES];
     
@@ -183,7 +184,7 @@
         NSImage *smallImage = [[NSImage alloc] initWithSize: newSize];
         [smallImage lockFocus];
         [sourceImage setSize: newSize];
-        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
+        [[NSGraphicsContext currentContext] setImageInterpolation:self.pngQuality];
         [sourceImage drawAtPoint:NSZeroPoint
                         fromRect:CGRectMake(0, 0, newSize.width, newSize.height)
                        operation:NSCompositeCopy fraction:1.0];

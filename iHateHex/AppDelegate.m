@@ -19,8 +19,22 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
+    
+    NSRect newFrame = self.window.frame;
+    newFrame.size.height = 275;
+    [_window setFrame:newFrame display:YES animate:NO];
+    
     self.ui_retinaReduceDropView.tipLabel = self.ui_retinaReducerTip;
-    self.ui_retinaReduceDropView.afterRevealInFinder = YES ; // Defualt checked.
+    self.ui_retinaReduceDropView.settingRetinaPngQuality = self.ui_settingRetinaReducerQuality;
+    
+    self.ui_retinaReducerRevealInFinder.state =
+        ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeyRetinaRevealInFinder] ? 0: 1) ; // Defualt checked.
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual]){
+        NSInteger quality = [[[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual] integerValue];
+        [self.ui_settingRetinaReducerQuality selectItemAtIndex:quality];
+    }
+        
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
@@ -79,8 +93,22 @@
     NSButton *checkButton = (NSButton*) sender;
     self.ui_retinaReduceDropView.afterRevealInFinder = checkButton.state;
     
+    if (checkButton.state == 0)
+        [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:DefaultUserKeyRetinaRevealInFinder];
+    else
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:DefaultUserKeyRetinaRevealInFinder];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (IBAction)clickedSettingQualityPng:(id)sender {
+    
+    NSInteger idx = self.ui_settingRetinaReducerQuality.selectedTag;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld",idx] forKey:DefaultUserKeySettingRetianReducerQual];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
 
 
 - (IBAction)changedSegments:(id)sender {

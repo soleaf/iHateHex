@@ -10,6 +10,7 @@
 
 @interface RetinaDropView : NSView <NSDraggingDestination>
 @property NSTextField *tipLabel;
+@property NSPopUpButton *settingRetinaPngQuality;
 @property BOOL afterRevealInFinder;
 
 @end

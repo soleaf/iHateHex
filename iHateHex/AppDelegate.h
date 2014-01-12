@@ -9,7 +9,11 @@
 #import <BFPopoverColorWell.h>
 #import "RetinaDropView.h"
 
+static NSString* const DefaultUserKeyRetinaRevealInFinder = @"retina_reveal_in_finder";
+static NSString* const DefaultUserKeySettingRetianReducerQual = @"setting_retina_reducer_qual";
+
 @interface AppDelegate : NSObject  <NSApplicationDelegate>
+
 
 @property (assign) IBOutlet NSWindow *window;
 
@@ -21,5 +25,7 @@
 @property (weak) IBOutlet NSTabView *tabView;
 @property (weak) IBOutlet RetinaDropView *ui_retinaReduceDropView;
 @property (weak) IBOutlet NSTextField *ui_retinaReducerTip;
+@property (weak) IBOutlet NSButton *ui_retinaReducerRevealInFinder;
+@property (weak) IBOutlet NSPopUpButton *ui_settingRetinaReducerQuality;
 
 @end

@@ -10,6 +10,8 @@
 
 @interface RetinaReducer : NSObject
 
+@property NSImageInterpolation pngQuality;
+
 - (void) reduceFiles:(NSArray*)fileList andAfeterRevelInFinder:(BOOL) isRevealInFinder;
 
 @end

@@ -78,6 +78,25 @@
     
     NSPasteboard *pboard = [sender draggingPasteboard];
     NSArray *draggedFilePaths = [pboard propertyListForType:NSFilenamesPboardType];
+    
+    NSImageInterpolation pngQuality = NSImageInterpolationHigh;
+    NSInteger settedQuality = self.settingRetinaPngQuality.selectedTag;
+    
+    switch (settedQuality) {
+        case 0:
+            pngQuality = NSImageInterpolationHigh;
+            break;
+        case 1:
+            pngQuality = NSImageInterpolationMedium;
+            break;
+        case 2:
+            pngQuality = NSImageInterpolationLow;
+            break;
+        default:
+            break;
+    }
+    retinaReducer.pngQuality = settedQuality;
+    
     [retinaReducer reduceFiles:draggedFilePaths andAfeterRevelInFinder:self.afterRevealInFinder];
     
     [self setHighlighted:NO];
