@@ -115,6 +115,9 @@
     if (isRevealInFinder)
         [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:fileURLS];
     
+    
+    [[NSSound soundNamed:@"Pop"] play];
+    
 }
 
 
