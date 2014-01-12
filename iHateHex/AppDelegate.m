@@ -20,6 +20,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
     self.ui_retinaReduceDropView.tipLabel = self.ui_retinaReducerTip;
+    self.ui_retinaReduceDropView.afterRevealInFinder = YES ; // Defualt checked.
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
