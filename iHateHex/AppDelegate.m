@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ColorConverter.h"
 
 @interface AppDelegate () < NSTextFieldDelegate >
 
@@ -51,22 +52,22 @@
     // Find New Color
     NSColor *newColor = nil;
     if (textField == self.ui_hexHexField){
-        newColor = [self colorWithHexColorString:textField.stringValue];
+        newColor = [ColorConverter colorWithHexColorString:textField.stringValue];
         textField.stringValue = [textField.stringValue stringByReplacingOccurrencesOfString:@"#" withString:@""];
     }
     else if (textField == self.ui_hexNSColorField)
-        newColor = [self colorWithNSColorCodeString:self.ui_hexNSColorField.stringValue];
+        newColor = [ColorConverter colorWithNSColorCodeString:self.ui_hexNSColorField.stringValue];
     else if (textField == self.ui_hexUIColorField)
-        newColor = [self colorWithUIColorCodeString:self.ui_hexUIColorField.stringValue];
+        newColor = [ColorConverter colorWithUIColorCodeString:self.ui_hexUIColorField.stringValue];
     
     // Apply New Color to controls
     self.ui_hexColPicker.color = newColor;
     if (textField != self.ui_hexHexField)
-        self.ui_hexHexField.stringValue = [self stringHexcodeWithNSColor:newColor];
+        self.ui_hexHexField.stringValue = [ColorConverter stringHexcodeWithNSColor:newColor];
     if (textField != self.ui_hexNSColorField)
-        self.ui_hexNSColorField.stringValue = [self stringNSColorcodeWithNSColor:newColor];
+        self.ui_hexNSColorField.stringValue = [ColorConverter stringNSColorcodeWithNSColor:newColor];
     if (textField != self.ui_hexUIColorField)
-        self.ui_hexUIColorField.stringValue = [self stringUIColorCodeWithNSColor:newColor];
+        self.ui_hexUIColorField.stringValue = [ColorConverter stringUIColorCodeWithNSColor:newColor];
     
 }
 
@@ -75,8 +76,45 @@
 
 - (IBAction)changedSegments:(id)sender {
     
+    // Change Tab
     NSSegmentedControl *segmentedCtr = (NSSegmentedControl*)sender;
     [self.tabView selectTabViewItemAtIndex:segmentedCtr.selectedSegment];
+    
+    CGFloat height = 200;
+    switch (segmentedCtr.selectedSegment) {
+        case 0:
+            height = 275;
+            break;
+        case 1:
+            height = 320;
+            break;
+            
+        default:
+            break;
+    }
+    
+    NSRect newFrame = self.window.frame;
+    newFrame.size.height = height;
+    [_window setFrame:newFrame display:YES animate:YES];
+    
+//
+//    NSRect newFrame = self.window.frame;
+//    NSView *selectedTabView = (NSView*) [self.tabView tabViewItemAtIndex:segmentedCtr.selectedSegment].view;
+//    
+//    // Calculating Max y
+//    CGFloat subViewMaxYH = 0;
+//    for (NSView *subView in selectedTabView.subviews) {
+//        
+//        CGFloat currentSubViewYH = subView.frame.origin.y + subView.frame.size.height;
+//        if (currentSubViewYH > subViewMaxYH)
+//            subViewMaxYH = currentSubViewYH;
+//        
+//        NSLog(@"subViewMaxY :%f",subViewMaxYH);
+//        
+//    }
+//    
+//    newFrame.size.height = self.tabView.frame.origin.y + subViewMaxYH;
+//    [_window setFrame:newFrame display:YES animate:YES];
     
 }
 
@@ -87,9 +125,9 @@
     NSColor *newColor = self.ui_hexColPicker.color;
     
     // Apply New Color to controls
-    self.ui_hexHexField.stringValue     = [self stringHexcodeWithNSColor:newColor];
-    self.ui_hexNSColorField.stringValue = [self stringNSColorcodeWithNSColor:newColor];
-    self.ui_hexUIColorField.stringValue = [self stringUIColorCodeWithNSColor:newColor];
+    self.ui_hexHexField.stringValue     = [ColorConverter stringHexcodeWithNSColor:newColor];
+    self.ui_hexNSColorField.stringValue = [ColorConverter stringNSColorcodeWithNSColor:newColor];
+    self.ui_hexUIColorField.stringValue = [ColorConverter stringUIColorCodeWithNSColor:newColor];
     
 }
 
@@ -123,93 +161,5 @@
 
 #pragma mark - ColorConvert
 
-- (NSString *)stringNSColorcodeWithNSColor:(NSColor*)nsColor
-{
-    return [NSString stringWithFormat:@"[NSColor colorWithCalibratedRed:%f green:%f blue:%f alpha:%f]",
-            nsColor.redComponent,
-            nsColor.greenComponent,
-            nsColor.blueComponent,
-            nsColor.alphaComponent];
-}
 
-- (NSString *)stringUIColorCodeWithNSColor:(NSColor*)nsColor
-{
-
-    return [NSString stringWithFormat:@"[UIColor colorWithRed:%f green:%f blue:%f alpha:%f]",
-            nsColor.redComponent,
-            nsColor.greenComponent,
-            nsColor.blueComponent,
-            nsColor.alphaComponent];
-}
-
-- (NSColor*)colorWithHexColorString:(NSString*)inColorString
-{
-    
-    inColorString = [inColorString stringByReplacingOccurrencesOfString:@"#" withString:@""];
-    
-    NSColor* result = nil;
-    unsigned colorCode = 0;
-    unsigned char redByte, greenByte, blueByte;
-    
-    if (nil != inColorString)
-    {
-        NSScanner* scanner = [NSScanner scannerWithString:inColorString];
-        (void) [scanner scanHexInt:&colorCode]; // ignore error
-    }
-    redByte = (unsigned char)(colorCode >> 16);
-    greenByte = (unsigned char)(colorCode >> 8);
-    blueByte = (unsigned char)(colorCode); // masks off high bits
-    
-    result = [NSColor
-              colorWithCalibratedRed:(CGFloat)redByte / 0xff
-              green:(CGFloat)greenByte / 0xff
-              blue:(CGFloat)blueByte / 0xff
-              alpha:1.0];
-    return result;
-}
-
-- (NSString*)stringHexcodeWithNSColor:(NSColor*)color
-{
-    return [NSString stringWithFormat:@"%02X%02X%02X",
-            (int) (color.redComponent * 0xFF), (int) (color.greenComponent * 0xFF),
-            (int) (color.blueComponent * 0xFF)];
-}
-
-
-- (NSColor *)colorWithNSColorCodeString:(NSString*)nsColorString
-{
-    // NSColor code stiring to NSColor Object
-    
-    nsColorString = [nsColorString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    
-    CGFloat r = 0.0, g = 0.0, b = 0.0, a = 1.0;
-    sscanf([nsColorString UTF8String],
-#ifdef __x86_64
-           "[NSColorcolorWithCalibratedRed:%lfgreen:%lfblue:%lfalpha:%lf]",
-#else
-           "[NSColorcolorWithCalibratedRed:%fgreen:%fblue:%falpha:%f]",
-#endif
-           &r, &g, &b, &a);
-    
-    return [NSColor colorWithCalibratedRed:r green:g blue:b alpha:a];
-}
-
-- (NSColor *)colorWithUIColorCodeString:(NSString *)uiColorString
-{
-    // UIColor code string to NSColor Object
-    
-    uiColorString = [uiColorString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    
-    CGFloat r = 0.0, g = 0.0, b = 0.0, a = 1.0;
-    sscanf([uiColorString UTF8String],
-#ifdef __x86_64
-           
-           "[UIColorcolorWithRed:%lfgreen:%lfblue:%lfalpha:%lf]",
-#else
-           "[UIColorcolorWithRed:%fgreen:%fblue:%falpha:%f]",
-#endif
-           &r, &g, &b, &a);
-    
-    return [NSColor colorWithCalibratedRed:r green:g blue:b alpha:a];
-}
 @end
