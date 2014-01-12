@@ -37,7 +37,7 @@
 
 -(NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
 {
-     [self setHighlighted:YES];
+    [self setHighlighted:YES];
     return NSDragOperationEvery;
 }
 
@@ -63,6 +63,8 @@
         
         if ([path rangeOfString:@"png"].location == NSNotFound){
             isAble = NO;
+            self.tipLabel.stringValue = @"Only .png files";
+
             break;
         }
     }
@@ -72,9 +74,11 @@
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
     
+    self.tipLabel.stringValue = @"Reduce!";
+    
     NSPasteboard *pboard = [sender draggingPasteboard];
     NSArray *draggedFilePaths = [pboard propertyListForType:NSFilenamesPboardType];
-    [retinaReducer reduceFiles:draggedFilePaths];
+    [retinaReducer reduceFiles:draggedFilePaths andAfeterRevelInFinder:self.afterRevealInFinder];
     
     [self setHighlighted:NO];
     return YES;
@@ -101,6 +105,8 @@
         [[NSColor colorWithCalibratedWhite:0.102 alpha:1.000] setFill];
         NSRectFill(frame);
         [super drawRect:frame];
+        
+        self.tipLabel.stringValue = @"Drop Retina image files";
     }
 }
 @end

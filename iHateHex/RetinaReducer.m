@@ -10,7 +10,7 @@
 
 @implementation RetinaReducer
 
-- (void)reduceFiles:(NSArray *)fileList
+- (void) reduceFiles:(NSArray*)fileList andAfeterRevelInFinder:(BOOL) isRevealInFinder
 {
     NSMutableString *errorLog = [[NSMutableString alloc] init];
     
@@ -110,7 +110,10 @@
         [alert setAlertStyle:NSWarningAlertStyle];
     }
     
-    [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:fileURLS];
+    
+    // Reveal In Finder
+    if (isRevealInFinder)
+        [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:fileURLS];
     
 }
 

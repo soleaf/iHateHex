@@ -9,5 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface RetinaDropView : NSView <NSDraggingDestination>
+@property NSTextField *tipLabel;
+@property BOOL afterRevealInFinder;
 
 @end

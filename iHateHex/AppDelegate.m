@@ -19,7 +19,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-   
+    self.ui_retinaReduceDropView.tipLabel = self.ui_retinaReducerTip;
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
@@ -73,6 +73,14 @@
 
 
 #pragma mark - Events
+- (IBAction)clickedReducerRevealInFinder:(id)sender {
+    
+    NSButton *checkButton = (NSButton*) sender;
+    self.ui_retinaReduceDropView.afterRevealInFinder = checkButton.state;
+    
+}
+
+
 
 - (IBAction)changedSegments:(id)sender {
     

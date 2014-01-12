@@ -14,13 +14,13 @@
 		F717E84F187FE5E5007EF344 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F717E84D187FE5E5007EF344 /* Credits.rtf */; };
 		F717E852187FE5E5007EF344 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E851187FE5E5007EF344 /* AppDelegate.m */; };
 		F717E855187FE5E5007EF344 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F717E853187FE5E5007EF344 /* MainMenu.xib */; };
-		F717E857187FE5E5007EF344 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F717E856187FE5E5007EF344 /* Images.xcassets */; };
 		F717E85E187FE5E5007EF344 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F717E85D187FE5E5007EF344 /* XCTest.framework */; };
 		F717E85F187FE5E5007EF344 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F717E83E187FE5E5007EF344 /* Cocoa.framework */; };
 		F717E867187FE5E5007EF344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F717E865187FE5E5007EF344 /* InfoPlist.strings */; };
 		F717E869187FE5E5007EF344 /* iHateHexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E868187FE5E5007EF344 /* iHateHexTests.m */; };
 		F7A687AF18823AB800B55793 /* ColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A687AE18823AB800B55793 /* ColorConverter.m */; };
 		F7AE86D31881B23400ECFFC2 /* RetinaReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE86D21881B23400ECFFC2 /* RetinaReducer.m */; };
+		F7C4E67418829A5900E2D949 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C4E67318829A5900E2D949 /* Images.xcassets */; };
 		F7EF6A10188163830078A63A /* RetinaDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EF6A0F188163830078A63A /* RetinaDropView.m */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,6 @@
 		F717E850187FE5E5007EF344 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F717E851187FE5E5007EF344 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F717E854187FE5E5007EF344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		F717E856187FE5E5007EF344 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F717E85C187FE5E5007EF344 /* iHateHexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iHateHexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F717E85D187FE5E5007EF344 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F717E864187FE5E5007EF344 /* iHateHexTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHateHexTests-Info.plist"; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		F7A687AE18823AB800B55793 /* ColorConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorConverter.m; sourceTree = "<group>"; };
 		F7AE86D11881B23400ECFFC2 /* RetinaReducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetinaReducer.h; sourceTree = "<group>"; };
 		F7AE86D21881B23400ECFFC2 /* RetinaReducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetinaReducer.m; sourceTree = "<group>"; };
+		F7C4E67318829A5900E2D949 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F7EF6A0E188163830078A63A /* RetinaDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetinaDropView.h; sourceTree = "<group>"; };
 		F7EF6A0F188163830078A63A /* RetinaDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetinaDropView.m; sourceTree = "<group>"; };
 		FBF74A74A79C49008A100F1F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 				F7A687AD18823AB800B55793 /* ColorConverter.h */,
 				F7A687AE18823AB800B55793 /* ColorConverter.m */,
 				F717E853187FE5E5007EF344 /* MainMenu.xib */,
-				F717E856187FE5E5007EF344 /* Images.xcassets */,
+				F7C4E67318829A5900E2D949 /* Images.xcassets */,
 				F717E845187FE5E5007EF344 /* Supporting Files */,
 			);
 			path = iHateHex;
@@ -254,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F717E849187FE5E5007EF344 /* InfoPlist.strings in Resources */,
-				F717E857187FE5E5007EF344 /* Images.xcassets in Resources */,
+				F7C4E67418829A5900E2D949 /* Images.xcassets in Resources */,
 				F717E84F187FE5E5007EF344 /* Credits.rtf in Resources */,
 				F717E855187FE5E5007EF344 /* MainMenu.xib in Resources */,
 			);

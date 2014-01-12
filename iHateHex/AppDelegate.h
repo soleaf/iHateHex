@@ -7,6 +7,7 @@
 //
 #import <Cocoa/Cocoa.h>
 #import <BFPopoverColorWell.h>
+#import "RetinaDropView.h"
 
 @interface AppDelegate : NSObject  <NSApplicationDelegate>
 
@@ -18,5 +19,7 @@
 @property (weak) IBOutlet NSTextField *ui_hexUIColorField;
 @property (weak) IBOutlet NSTextField *ui_hexNSColorField;
 @property (weak) IBOutlet NSTabView *tabView;
+@property (weak) IBOutlet RetinaDropView *ui_retinaReduceDropView;
+@property (weak) IBOutlet NSTextField *ui_retinaReducerTip;
 
 @end

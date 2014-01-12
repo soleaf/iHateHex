@@ -84,6 +84,8 @@
                 <outlet property="ui_hexHexField" destination="NfQ-gG-Y8N" id="0HT-PZ-z4u"/>
                 <outlet property="ui_hexNSColorField" destination="aP7-fH-kI3" id="OpB-FU-CNo"/>
                 <outlet property="ui_hexUIColorField" destination="tWN-ZP-xUl" id="gm5-sh-4w4"/>
+                <outlet property="ui_retinaReduceDropView" destination="VW8-EG-jL5" id="4R6-n4-EII"/>
+                <outlet property="ui_retinaReducerTip" destination="fYg-II-Dq1" id="Vjs-zx-jEe"/>
                 <outlet property="window" destination="3Aj-KQ-hhF" id="oGO-Oa-bzQ"/>
             </connections>
         </customObject>
@@ -91,14 +93,14 @@
         <window title="iHateHex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="3Aj-KQ-hhF" customClass="SNRHUDWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1017" y="80" width="225" height="250"/>
+            <rect key="contentRect" x="1017" y="80" width="225" height="249"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="cWy-KU-6El">
-                <rect key="frame" x="0.0" y="0.0" width="225" height="250"/>
+                <rect key="frame" x="0.0" y="0.0" width="225" height="249"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tabView drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="ZnK-x3-kAN">
-                        <rect key="frame" x="0.0" y="0.0" width="225" height="193"/>
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="192"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="225" id="1eB-66-T0c"/>
@@ -107,11 +109,11 @@
                         <tabViewItems>
                             <tabViewItem label="Tab" identifier="1" id="0sh-Vf-WPQ">
                                 <view key="view" id="OVc-Wp-xFK">
-                                    <rect key="frame" x="0.0" y="0.0" width="225" height="193"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="225" height="192"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfQ-gG-Y8N">
-                                            <rect key="frame" x="17" y="125" width="161" height="22"/>
+                                            <rect key="frame" x="17" y="124" width="161" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Hex" drawsBackground="YES" id="Yf0-5I-c22" customClass="SNRHUDTextFieldCell">
                                                 <font key="font" metaFont="system"/>
@@ -123,7 +125,7 @@
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tWN-ZP-xUl">
-                                            <rect key="frame" x="17" y="90" width="161" height="22"/>
+                                            <rect key="frame" x="17" y="89" width="161" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="UIColor" drawsBackground="YES" id="66m-8U-A6g" customClass="SNRHUDTextFieldCell">
                                                 <font key="font" size="13" name="LucidaGrande"/>
@@ -135,7 +137,7 @@
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP7-fH-kI3">
-                                            <rect key="frame" x="16" y="58" width="162" height="22"/>
+                                            <rect key="frame" x="16" y="57" width="162" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="NSColor" drawsBackground="YES" id="KW2-eA-g2R" customClass="SNRHUDTextFieldCell">
                                                 <font key="font" size="13" name="LucidaGrande"/>
@@ -146,10 +148,10 @@
                                                 <outlet property="delegate" destination="494" id="Ko9-eB-98J"/>
                                             </connections>
                                         </textField>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-v1-9Jd">
-                                            <rect key="frame" x="186" y="125" width="23" height="22"/>
+                                        <button toolTip="Copy HexCode" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-v1-9Jd">
+                                            <rect key="frame" x="186" y="124" width="23" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hfz-7f-EdY" customClass="SNRHUDButtonCell">
+                                            <buttonCell key="cell" type="square" title="📄" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hfz-7f-EdY" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -157,10 +159,10 @@
                                                 <action selector="clickedCopyButton:" target="494" id="Aft-Kl-ead"/>
                                             </connections>
                                         </button>
-                                        <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="3gd-bh-yXv">
-                                            <rect key="frame" x="186" y="90" width="23" height="22"/>
+                                        <button toolTip="Copy UIColor Code" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="3gd-bh-yXv">
+                                            <rect key="frame" x="186" y="89" width="23" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qN5-qb-O6N" customClass="SNRHUDButtonCell">
+                                            <buttonCell key="cell" type="square" title="📄" bezelStyle="shadowlessSquare" image="copy" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qN5-qb-O6N" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -168,10 +170,10 @@
                                                 <action selector="clickedCopyButton:" target="494" id="5QS-9g-UJK"/>
                                             </connections>
                                         </button>
-                                        <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="rUo-FQ-6ED">
-                                            <rect key="frame" x="186" y="58" width="23" height="22"/>
+                                        <button toolTip="Copy NSColor Code" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="rUo-FQ-6ED">
+                                            <rect key="frame" x="186" y="57" width="23" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fl3-QF-FWi" customClass="SNRHUDButtonCell">
+                                            <buttonCell key="cell" type="square" title="📄" bezelStyle="shadowlessSquare" image="copy" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fl3-QF-FWi" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
@@ -180,7 +182,7 @@
                                             </connections>
                                         </button>
                                         <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfZ-Rx-JgR" customClass="BFPopoverColorWell">
-                                            <rect key="frame" x="97" y="168" width="30" height="23"/>
+                                            <rect key="frame" x="97" y="167" width="30" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -188,7 +190,7 @@
                                             </connections>
                                         </colorWell>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21Q-B6-PLj">
-                                            <rect key="frame" x="15" y="11" width="196" height="34"/>
+                                            <rect key="frame" x="15" y="10" width="196" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Input one, others will changed to new conveted color codes" id="OKD-jZ-Vmg">
                                                 <font key="font" size="11" name="LucidaGrande"/>
@@ -201,11 +203,11 @@
                             </tabViewItem>
                             <tabViewItem label="View" identifier="2" id="SvS-q8-lrW">
                                 <view key="view" id="O9J-bp-Apd">
-                                    <rect key="frame" x="0.0" y="0.0" width="225" height="237"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="225" height="192"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VW8-EG-jL5" customClass="RetinaDropView">
-                                            <rect key="frame" x="12" y="110" width="201" height="127"/>
+                                            <rect key="frame" x="12" y="65" width="201" height="127"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYg-II-Dq1">
@@ -220,7 +222,7 @@
                                             </subviews>
                                         </customView>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVZ-V1-ZGj">
-                                            <rect key="frame" x="13" y="62" width="196" height="34"/>
+                                            <rect key="frame" x="13" y="17" width="196" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="To make resized files, Drag and drop @2x files here" id="rVg-zR-K7w">
                                                 <font key="font" size="10" name="LucidaGrande"/>
@@ -229,19 +231,22 @@
                                             </textFieldCell>
                                         </textField>
                                         <box autoresizesSubviews="NO" verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="CEU-QN-x5d">
-                                            <rect key="frame" x="0.0" y="49" width="225" height="5"/>
+                                            <rect key="frame" x="0.0" y="4" width="225" height="5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TVt-b6-XEe">
-                                            <rect key="frame" x="14" y="16" width="194" height="18"/>
+                                            <rect key="frame" x="14" y="-29" width="194" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Reveal in finder After perfom" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="QfO-Zm-OaE" customClass="SNRHUDButtonCell">
+                                            <buttonCell key="cell" type="check" title="Reveal in finder After perform" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="QfO-Zm-OaE" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" size="11" name="LucidaGrande"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="clickedReducerRevealInFinder:" target="494" id="T7O-t8-tzn"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -255,7 +260,7 @@
                         </tabViewItems>
                     </tabView>
                     <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuC-Zo-h3r">
-                        <rect key="frame" x="11" y="213" width="204" height="24"/>
+                        <rect key="frame" x="11" y="212" width="204" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <segmentedCell key="cell" alignment="left" style="rounded" trackingMode="selectOne" id="tPp-DV-7cD" customClass="SNRHUDSegmentedCell">
                             <font key="font" metaFont="system"/>
@@ -278,4 +283,7 @@
             </view>
         </window>
     </objects>
+    <resources>
+        <image name="copy" width="24" height="24"/>
+    </resources>
 </document>

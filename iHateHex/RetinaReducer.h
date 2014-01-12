@@ -10,6 +10,6 @@
 
 @interface RetinaReducer : NSObject
 
-- (void) reduceFiles:(NSArray*)fileList;
+- (void) reduceFiles:(NSArray*)fileList andAfeterRevelInFinder:(BOOL) isRevealInFinder;
 
 @end
