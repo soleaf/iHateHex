@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ColorConverter.h"
 #import "ColorPicker.h"
+#import "DDHotKeyCenter.h"
+#import <Carbon/Carbon.h>
 
 @interface AppDelegate () < NSTextFieldDelegate >
 
@@ -49,18 +51,8 @@
     }
  
     // ColorPicker
-    [self startGetMouseLocation];
     self.ui_colorPickerImageView.imageScaling = NSScaleProportionally;
-    
-    // GetCurrentWIndowId
-    NSArray *windowList = (__bridge NSArray *)CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
-    for (NSDictionary *info in windowList) {
-        if ([[info objectForKey:(NSString *)kCGWindowOwnerName] isEqualToString:@"iHateHex"] && ![[info objectForKey:(NSString *)kCGWindowName] isEqualToString:@""]) {
-            NSInteger exId = [[info objectForKey:(NSString *)kCGWindowNumber] integerValue];
-            windowID = (uint32) exId;
-        }
-    }
-    
+    [self registerHotKey];
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
@@ -72,7 +64,36 @@
 
 #pragma mark - Functions
 
+#pragma mark - HotKey
+- (void)registerHotKey
+{
+    DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
+    if (![c registerHotKeyWithKeyCode:kVK_ANSI_1 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask) target:self action:@selector(hotKeyCallcolorPickerPick) object:nil]) {
+        NSLog(@"unable to register hotkey");
+    } else {
+        NSLog(@"registered hotkey");
+    }
+}
 
+//- (void)unregisterHotKey
+//{
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//    
+//    DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
+//	[c unregisterHotKeyWithKeyCode:[userDefaults integerForKey:kUserDefaultsKeyCode]
+//                     modifierFlags:[[userDefaults valueForKey:kUserDefaultsModifierKeys] longValue]];
+//	NSLog(@"Unregistered hotkey");
+//}
+
+- (void) hotKeyCallcolorPickerShow
+{
+    
+}
+
+- (void) hotKeyCallcolorPickerPick
+{
+    
+}
 
 
 #pragma mark - Window
@@ -231,20 +252,61 @@
 #pragma mark - ColorConvert
 
 #pragma mark - ColorPicker
-- (void)startCaptureScreen
+- (void)startColorPickerView
 {
+    
+    // GetCurrentWIndowId
+    NSArray *windowList = (__bridge NSArray *)CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
+    for (NSDictionary *info in windowList) {
+        if ([[info objectForKey:(NSString *)kCGWindowOwnerName] isEqualToString:@"iHateHex"] && ![[info objectForKey:(NSString *)kCGWindowName] isEqualToString:@""]) {
+            NSInteger exId = [[info objectForKey:(NSString *)kCGWindowNumber] integerValue];
+            windowID = (uint32) exId;
+        }
+    }
+    
     // Start mouse capturing
     [self startGetMouseLocation];
     [self.colorPickerCursorView setLevel: NSPopUpMenuWindowLevel];
     
     // HideMouseCursor
     [NSCursor hide];
+    
+    [self.colorPickerCursorView.contentView setHidden:NO];
 }
+
+- (void)stopColorPickerView
+{
+    CGDisplayShowCursor(kCGDirectMainDisplay);
+    [self stopGetMouseLocation];
+    [self.colorPickerCursorView.contentView setHidden:YES];
+    
+    [NSCursor unhide];
+}
+
+- (IBAction)clickedColorPickerView:(id)sender {
+    
+    self.ui_hexColPicker.color = [ColorPicker colorAtLocation:mouseLocation];
+    [self changedHexColorPicker:self.ui_hexColPicker];
+    
+    [self stopColorPickerView];
+    
+}
+
+- (IBAction)clikedStartColorPickerView:(id)sender {
+    
+    [self startColorPickerView];
+    
+}
+
 
 #pragma mark - MouseLocation
 - (void)startGetMouseLocation
 {
-    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.03f target:self selector:@selector(geMouseLocationTick) userInfo:nil repeats:YES];
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.03f
+                                                        target:self
+                                                      selector:@selector(geMouseLocationTick)
+                                                      userInfo:nil
+                                                       repeats:YES];
 }
 
 - (void)stopGetMouseLocation
@@ -282,7 +344,6 @@
             p.x -= f.size.width / 2.0;
             p.y -= f.size.height / 2.0;
             [self.colorPickerCursorView setFrameOrigin:p];
-            NSLog(@"%s Moved window to (%.1f, %1.f)", __PRETTY_FUNCTION__, p.x, p.y);
             //    }
         });
     });

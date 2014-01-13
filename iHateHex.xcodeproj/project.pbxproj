@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6D2F028B73DF45B5B4F6E1FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4276C6FC73A4C70A7956D8B /* libPods.a */; };
+		F7174DDB1883E59400D8F8E5 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7174DDA1883E59400D8F8E5 /* DDHotKeyCenter.m */; };
+		F7174DDD1883E6C200D8F8E5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7174DDC1883E6C200D8F8E5 /* Carbon.framework */; };
 		F717E83F187FE5E5007EF344 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F717E83E187FE5E5007EF344 /* Cocoa.framework */; };
 		F717E849187FE5E5007EF344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F717E847187FE5E5007EF344 /* InfoPlist.strings */; };
 		F717E84B187FE5E5007EF344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E84A187FE5E5007EF344 /* main.m */; };
@@ -37,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		A4276C6FC73A4C70A7956D8B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7174DD91883E59400D8F8E5 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		F7174DDA1883E59400D8F8E5 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		F7174DDC1883E6C200D8F8E5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		F717E83B187FE5E5007EF344 /* iHateHex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHateHex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F717E83E187FE5E5007EF344 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F717E841187FE5E5007EF344 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7174DDD1883E6C200D8F8E5 /* Carbon.framework in Frameworks */,
 				F717E83F187FE5E5007EF344 /* Cocoa.framework in Frameworks */,
 				6D2F028B73DF45B5B4F6E1FD /* libPods.a in Frameworks */,
 			);
@@ -112,6 +118,7 @@
 		F717E83D187FE5E5007EF344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7174DDC1883E6C200D8F8E5 /* Carbon.framework */,
 				F717E83E187FE5E5007EF344 /* Cocoa.framework */,
 				F717E85D187FE5E5007EF344 /* XCTest.framework */,
 				F717E840187FE5E5007EF344 /* Other Frameworks */,
@@ -135,6 +142,8 @@
 			children = (
 				F717E850187FE5E5007EF344 /* AppDelegate.h */,
 				F717E851187FE5E5007EF344 /* AppDelegate.m */,
+				F7174DD91883E59400D8F8E5 /* DDHotKeyCenter.h */,
+				F7174DDA1883E59400D8F8E5 /* DDHotKeyCenter.m */,
 				F717E89718838DC4007EF344 /* Hex */,
 				F717E89B18838DD1007EF344 /* Retina Reducer */,
 				F717E853187FE5E5007EF344 /* MainMenu.xib */,
@@ -335,6 +344,7 @@
 				F717E84B187FE5E5007EF344 /* main.m in Sources */,
 				F7AE86D31881B23400ECFFC2 /* RetinaReducer.m in Sources */,
 				F717E89A18838DCC007EF344 /* ColorPicker.m in Sources */,
+				F7174DDB1883E59400D8F8E5 /* DDHotKeyCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
