@@ -227,7 +227,7 @@
             height = 320;
             break;
         case 2:
-            height = 350;
+            height = 370;
             break;
             
         default:
@@ -279,8 +279,19 @@
     
     NSButton *button = (NSButton*)sender;
     [self copyToClipboardAt:button.tag];
-    
 
+}
+
+
+- (IBAction)clickedFeedBack:(id)sender {
+    
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"mailto:help@mintcode.org"]];
+    
+}
+
+- (IBAction)clickedHomepage:(id)sender {
+    
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.mintcode.org"]];
     
 }
 
