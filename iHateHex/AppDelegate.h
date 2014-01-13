@@ -11,12 +11,14 @@
 
 static NSString* const DefaultUserKeyRetinaRevealInFinder = @"retina_reveal_in_finder";
 static NSString* const DefaultUserKeySettingRetianReducerQual = @"setting_retina_reducer_qual";
+static NSString* const DefaultUserKeySettingColorPickerAutoCopy = @"setting_colorpicker_autocopy";
 
 @interface AppDelegate : NSObject  <NSApplicationDelegate>
 
 
 @property (assign) IBOutlet NSWindow *window;
 @property (unsafe_unretained) IBOutlet NSWindow *colorPickerCursorView;
+@property (weak) IBOutlet NSColorWell *ui_colorPickerCursorColor;
 
 // Hex
 @property (weak) IBOutlet BFPopoverColorWell *ui_hexColPicker;
@@ -28,6 +30,7 @@ static NSString* const DefaultUserKeySettingRetianReducerQual = @"setting_retina
 @property (weak) IBOutlet NSTextField *ui_retinaReducerTip;
 @property (weak) IBOutlet NSButton *ui_retinaReducerRevealInFinder;
 @property (weak) IBOutlet NSPopUpButton *ui_settingRetinaReducerQuality;
+@property (weak) IBOutlet NSPopUpButton *ui_settingColorPickerAutocopy;
 @property (weak) IBOutlet NSImageView *ui_colorPickerImageView;
 
 

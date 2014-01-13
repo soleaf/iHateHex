@@ -7,8 +7,8 @@
 //
 
 #import "ColorPicker.h"
-#define kWidth 20
-#define kHeight 20
+#define kWidth 14
+#define kHeight 14
 
 @implementation ColorPicker
 
@@ -31,11 +31,8 @@
 + (NSImage *)imageAtLocation:(NSPoint)mouseLocation excludeWindowId:(uint32)excludeID
 {
     
-    CGDisplayHideCursor(kCGDirectMainDisplay);
     CGRect imageRect = CGRectMake(mouseLocation.x - kWidth / 2, mouseLocation.y - kHeight / 2, kWidth, kHeight);
-
     CFArrayRef windowIDList = CGWindowListCreate(kCGWindowListOptionOnScreenBelowWindow,excludeID);
-
     CGImageRef imageRef = CGWindowListCreateImageFromArray(imageRect,windowIDList, kCGWindowImageBestResolution);
     
     NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];

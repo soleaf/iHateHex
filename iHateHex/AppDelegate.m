@@ -17,8 +17,8 @@
 // ColorPicker
 {
     uint32 windowID;
-    
 }
+
 @property (retain) NSTimer *updateTimer;
 @property (assign) BOOL updateMouseLocation;
 @property (assign) NSPoint mouseLocation;
@@ -36,29 +36,46 @@
 {
     
     NSRect newFrame = self.window.frame;
-    newFrame.size.height = 275;
+    newFrame.size.height = 350;
     [_window setFrame:newFrame display:YES animate:NO];
     
     self.ui_retinaReduceDropView.tipLabel = self.ui_retinaReducerTip;
     self.ui_retinaReduceDropView.settingRetinaPngQuality = self.ui_settingRetinaReducerQuality;
     
-    self.ui_retinaReducerRevealInFinder.state =
-        ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeyRetinaRevealInFinder] ? 0: 1) ; // Defualt checked.
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual]){
-        NSInteger quality = [[[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual] integerValue];
-        [self.ui_settingRetinaReducerQuality selectItemAtIndex:quality];
-    }
+    [self loadSettings];
  
     // ColorPicker
     self.ui_colorPickerImageView.imageScaling = NSScaleProportionally;
     [self registerHotKey];
+    
+    [self stopColorPickerView];
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
 {
     [self.window makeKeyAndOrderFront:self];
     return NO;
+}
+
+- (void) loadSettings
+{
+    // Retina Reducer
+    self.ui_retinaReducerRevealInFinder.state =
+    ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeyRetinaRevealInFinder] ? 0: 1) ; // Defualt checked.
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual]){
+        NSInteger quality = [[[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual] integerValue];
+        [self.ui_settingRetinaReducerQuality selectItemAtIndex:quality];
+    }
+    
+    
+    // ColorPicker
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingColorPickerAutoCopy]){
+        NSInteger autoCopyType = [[[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingColorPickerAutoCopy] integerValue];
+        [self.ui_settingColorPickerAutocopy selectItemAtIndex:autoCopyType];
+    }
 }
 
 
@@ -68,7 +85,7 @@
 - (void)registerHotKey
 {
     DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
-    if (![c registerHotKeyWithKeyCode:kVK_ANSI_1 modifierFlags:(NSCommandKeyMask | NSShiftKeyMask) target:self action:@selector(hotKeyCallcolorPickerPick) object:nil]) {
+    if (![c registerHotKeyWithKeyCode:kVK_ANSI_C modifierFlags:(NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask) target:self action:@selector(hotKeyCallcolorPickerPick) object:nil]) {
         NSLog(@"unable to register hotkey");
     } else {
         NSLog(@"registered hotkey");
@@ -85,6 +102,27 @@
 //	NSLog(@"Unregistered hotkey");
 //}
 
+- (void) copyToClipboardAt:(NSInteger) colorTextFieldTag
+{
+    NSString *targetString = nil;
+    switch (colorTextFieldTag) {
+        case 2:
+            targetString = self.ui_hexHexField.stringValue;
+            break;
+        case 1:
+            targetString = self.ui_hexNSColorField.stringValue;
+            break;
+        case 0:
+            targetString = self.ui_hexUIColorField.stringValue;
+            break;
+        default:
+            break;
+    }
+    
+    [[NSPasteboard generalPasteboard] clearContents];
+    [[NSPasteboard generalPasteboard] setString:targetString  forType:NSStringPboardType];
+}
+
 - (void) hotKeyCallcolorPickerShow
 {
     
@@ -92,7 +130,7 @@
 
 - (void) hotKeyCallcolorPickerPick
 {
-    
+    [self startColorPickerView];
 }
 
 
@@ -163,6 +201,16 @@
     
 }
 
+- (IBAction)clickedSettingColorPiackerAutoCopy:(id)sender {
+    
+    NSInteger idx = self.ui_settingColorPickerAutocopy.selectedTag;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld",idx] forKey:DefaultUserKeySettingColorPickerAutoCopy];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
+
 
 - (IBAction)changedSegments:(id)sender {
     
@@ -170,13 +218,16 @@
     NSSegmentedControl *segmentedCtr = (NSSegmentedControl*)sender;
     [self.tabView selectTabViewItemAtIndex:segmentedCtr.selectedSegment];
     
-    CGFloat height = 200;
+    CGFloat height = 350;
     switch (segmentedCtr.selectedSegment) {
         case 0:
-            height = 275;
+            height = 350;
             break;
         case 1:
             height = 320;
+            break;
+        case 2:
+            height = 350;
             break;
             
         default:
@@ -227,26 +278,12 @@
     // Copy to clipboard
     
     NSButton *button = (NSButton*)sender;
-    NSString *targetString = nil;
+    [self copyToClipboardAt:button.tag];
     
-    switch (button.tag) {
-        case 0:
-            targetString = self.ui_hexHexField.stringValue;
-            break;
-        case 1:
-            targetString = self.ui_hexUIColorField.stringValue;
-            break;
-        case 2:
-            targetString = self.ui_hexNSColorField.stringValue;
-            break;
-        default:
-            break;
-    }
-    
-    [[NSPasteboard generalPasteboard] clearContents];
-    [[NSPasteboard generalPasteboard] setString:targetString  forType:NSStringPboardType];
+
     
 }
+
 
 
 #pragma mark - ColorConvert
@@ -254,13 +291,17 @@
 #pragma mark - ColorPicker
 - (void)startColorPickerView
 {
-    
+    [self.colorPickerCursorView makeKeyAndOrderFront:self];
+    [NSApp activateIgnoringOtherApps:YES];
+
     // GetCurrentWIndowId
     NSArray *windowList = (__bridge NSArray *)CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
     for (NSDictionary *info in windowList) {
-        if ([[info objectForKey:(NSString *)kCGWindowOwnerName] isEqualToString:@"iHateHex"] && ![[info objectForKey:(NSString *)kCGWindowName] isEqualToString:@""]) {
+        if ([[info objectForKey:(NSString *)kCGWindowOwnerName] isEqualToString:@"iHateHex"] && [[info objectForKey:(NSString *)kCGWindowName] isEqualToString:@"iHateHexColorPickerWindow"]) {
             NSInteger exId = [[info objectForKey:(NSString *)kCGWindowNumber] integerValue];
             windowID = (uint32) exId;
+            
+            NSLog(@"info:%@",info);
         }
     }
     
@@ -270,16 +311,16 @@
     
     // HideMouseCursor
     [NSCursor hide];
+    CGDisplayHideCursor(kCGDirectMainDisplay);
     
-    [self.colorPickerCursorView.contentView setHidden:NO];
 }
 
 - (void)stopColorPickerView
 {
-    CGDisplayShowCursor(kCGDirectMainDisplay);
     [self stopGetMouseLocation];
-    [self.colorPickerCursorView.contentView setHidden:YES];
+    [self.colorPickerCursorView orderOut:self];
     
+    CGDisplayShowCursor(kCGDirectMainDisplay);
     [NSCursor unhide];
 }
 
@@ -289,6 +330,10 @@
     [self changedHexColorPicker:self.ui_hexColPicker];
     
     [self stopColorPickerView];
+    
+    // Copy to clipboard
+    NSInteger copyType = self.ui_settingColorPickerAutocopy.selectedTag;
+    [self copyToClipboardAt:copyType];
     
 }
 
@@ -331,20 +376,15 @@
             self.ui_colorPickerImageView.image = iamage;
             self.ui_colorPickerImageView.image.size = CGSizeMake(500, 500);
             
-            //    CGRect cursorViewNewFrame = self.colorPickerCursorView.frame;
-            //    cursorViewNewFrame.origin.x = mouseLocation.x;
-            //    cursorViewNewFrame.origin.y = mouseLocation.y;
-            //    NSLog(@"%f %f - %f %f", cursorViewNewFrame.origin.x, cursorViewNewFrame.origin.y, mouseLocation.x, mouseLocation.y);
-            //    [self.colorPickerCursorView setFrame:cursorViewNewFrame display:YES];
-            //
+            // Move Window
             NSPoint p = [NSEvent mouseLocation];
-            //
             NSRect f = [self.colorPickerCursorView frame];
-            //    if (!NSPointInRect(p, f)) {
             p.x -= f.size.width / 2.0;
             p.y -= f.size.height / 2.0;
             [self.colorPickerCursorView setFrameOrigin:p];
-            //    }
+
+            // Sampling Color
+            self.ui_colorPickerCursorColor.color = [ColorPicker colorAtLocation:mouseLocation];
         });
     });
     
