@@ -16,6 +16,7 @@ static NSString* const DefaultUserKeySettingRetianReducerQual = @"setting_retina
 
 
 @property (assign) IBOutlet NSWindow *window;
+@property (unsafe_unretained) IBOutlet NSWindow *colorPickerCursorView;
 
 // Hex
 @property (weak) IBOutlet BFPopoverColorWell *ui_hexColPicker;
@@ -27,5 +28,7 @@ static NSString* const DefaultUserKeySettingRetianReducerQual = @"setting_retina
 @property (weak) IBOutlet NSTextField *ui_retinaReducerTip;
 @property (weak) IBOutlet NSButton *ui_retinaReducerRevealInFinder;
 @property (weak) IBOutlet NSPopUpButton *ui_settingRetinaReducerQuality;
+@property (weak) IBOutlet NSImageView *ui_colorPickerImageView;
+
 
 @end

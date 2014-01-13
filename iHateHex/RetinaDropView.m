@@ -27,8 +27,9 @@
         [self registerForDraggedTypes:[NSArray arrayWithObjects:
                                        NSColorPboardType, NSFilenamesPboardType, nil]];
 
-        [self setWantsLayer:YES];
-        self.layer.cornerRadius = 5.0;
+        self.wantsLayer = YES;
+        self.layer.masksToBounds = YES;
+        self.layer.cornerRadius = 10.0; // Why not working??
         
         retinaReducer = [[RetinaReducer alloc] init];
     }
@@ -115,7 +116,6 @@
 - (void)drawRect:(NSRect)frame {
     [super drawRect:frame];
     if (isHighlighted) {
-//        [NSBezierPath setDefaultLineWidth:6.0];
         [[NSColor keyboardFocusIndicatorColor] setFill];
         NSRectFill(frame);
         [super drawRect:frame];
@@ -127,5 +127,6 @@
         
         self.tipLabel.stringValue = @"Drop Retina image files";
     }
+
 }
 @end

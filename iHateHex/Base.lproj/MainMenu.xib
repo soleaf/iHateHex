@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -79,7 +79,9 @@
         </menu>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="colorPickerCursorView" destination="eSx-c5-K0u" id="4Yu-8w-dpQ"/>
                 <outlet property="tabView" destination="ZnK-x3-kAN" id="Jhy-Be-YcC"/>
+                <outlet property="ui_colorPickerImageView" destination="zEp-57-bSM" id="mWc-Gh-psa"/>
                 <outlet property="ui_hexColPicker" destination="AfZ-Rx-JgR" id="zbe-Dz-zX5"/>
                 <outlet property="ui_hexHexField" destination="NfQ-gG-Y8N" id="0HT-PZ-z4u"/>
                 <outlet property="ui_hexNSColorField" destination="aP7-fH-kI3" id="OpB-FU-CNo"/>
@@ -96,7 +98,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1017" y="80" width="225" height="302"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="cWy-KU-6El">
                 <rect key="frame" x="0.0" y="0.0" width="225" height="302"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -270,14 +272,14 @@
                                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-VT-Xg8">
                                             <rect key="frame" x="86" y="198" width="129" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <popUpButtonCell key="cell" type="push" title="Low" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" tag="2" inset="2" selectedItem="cdS-RX-5Fl" id="e6r-X8-OtM">
+                                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="e6r-X8-OtM">
                                                 <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="menu"/>
                                                 <menu key="menu" title="OtherViews" id="1zI-eG-gU8">
                                                     <items>
                                                         <menuItem title="High" id="4r6-TH-YsP"/>
                                                         <menuItem title="Medium" tag="1" id="Sof-C2-g4T"/>
-                                                        <menuItem title="Low" state="on" tag="2" id="cdS-RX-5Fl"/>
+                                                        <menuItem title="Low" tag="2" id="cdS-RX-5Fl"/>
                                                     </items>
                                                 </menu>
                                                 <connections>
@@ -321,6 +323,40 @@
                     <constraint firstAttribute="bottom" secondItem="ZnK-x3-kAN" secondAttribute="bottom" id="f8o-a7-LiM"/>
                 </constraints>
             </view>
+        </window>
+        <window title="iHateHexColorPickerWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="eSx-c5-K0u">
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="207" width="100" height="100"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <view key="contentView" id="Oi1-R2-DjQ">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-57-bSM" customClass="NSImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-wA-kdR">
+                                <rect key="frame" x="48" y="2" width="5" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="rYh-Ix-FvW">
+                                <rect key="frame" x="0.0" y="48" width="100" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="bDZ-SR-trE"/>
+            </connections>
         </window>
     </objects>
     <resources>

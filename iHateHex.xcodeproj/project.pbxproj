@@ -18,6 +18,7 @@
 		F717E85F187FE5E5007EF344 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F717E83E187FE5E5007EF344 /* Cocoa.framework */; };
 		F717E867187FE5E5007EF344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F717E865187FE5E5007EF344 /* InfoPlist.strings */; };
 		F717E869187FE5E5007EF344 /* iHateHexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E868187FE5E5007EF344 /* iHateHexTests.m */; };
+		F717E89A18838DCC007EF344 /* ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E89918838DCC007EF344 /* ColorPicker.m */; };
 		F7A687AF18823AB800B55793 /* ColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A687AE18823AB800B55793 /* ColorConverter.m */; };
 		F7AE86D31881B23400ECFFC2 /* RetinaReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE86D21881B23400ECFFC2 /* RetinaReducer.m */; };
 		F7C4E67418829A5900E2D949 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C4E67318829A5900E2D949 /* Images.xcassets */; };
@@ -54,6 +55,8 @@
 		F717E864187FE5E5007EF344 /* iHateHexTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iHateHexTests-Info.plist"; sourceTree = "<group>"; };
 		F717E866187FE5E5007EF344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F717E868187FE5E5007EF344 /* iHateHexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHateHexTests.m; sourceTree = "<group>"; };
+		F717E89818838DCC007EF344 /* ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPicker.h; sourceTree = "<group>"; };
+		F717E89918838DCC007EF344 /* ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPicker.m; sourceTree = "<group>"; };
 		F7A687AD18823AB800B55793 /* ColorConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConverter.h; sourceTree = "<group>"; };
 		F7A687AE18823AB800B55793 /* ColorConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorConverter.m; sourceTree = "<group>"; };
 		F7AE86D11881B23400ECFFC2 /* RetinaReducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetinaReducer.h; sourceTree = "<group>"; };
@@ -132,12 +135,8 @@
 			children = (
 				F717E850187FE5E5007EF344 /* AppDelegate.h */,
 				F717E851187FE5E5007EF344 /* AppDelegate.m */,
-				F7EF6A0E188163830078A63A /* RetinaDropView.h */,
-				F7EF6A0F188163830078A63A /* RetinaDropView.m */,
-				F7AE86D11881B23400ECFFC2 /* RetinaReducer.h */,
-				F7AE86D21881B23400ECFFC2 /* RetinaReducer.m */,
-				F7A687AD18823AB800B55793 /* ColorConverter.h */,
-				F7A687AE18823AB800B55793 /* ColorConverter.m */,
+				F717E89718838DC4007EF344 /* Hex */,
+				F717E89B18838DD1007EF344 /* Retina Reducer */,
 				F717E853187FE5E5007EF344 /* MainMenu.xib */,
 				F7C4E67318829A5900E2D949 /* Images.xcassets */,
 				F717E845187FE5E5007EF344 /* Supporting Files */,
@@ -173,6 +172,28 @@
 				F717E865187FE5E5007EF344 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F717E89718838DC4007EF344 /* Hex */ = {
+			isa = PBXGroup;
+			children = (
+				F717E89818838DCC007EF344 /* ColorPicker.h */,
+				F717E89918838DCC007EF344 /* ColorPicker.m */,
+				F7A687AD18823AB800B55793 /* ColorConverter.h */,
+				F7A687AE18823AB800B55793 /* ColorConverter.m */,
+			);
+			name = Hex;
+			sourceTree = "<group>";
+		};
+		F717E89B18838DD1007EF344 /* Retina Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				F7EF6A0E188163830078A63A /* RetinaDropView.h */,
+				F7EF6A0F188163830078A63A /* RetinaDropView.m */,
+				F7AE86D11881B23400ECFFC2 /* RetinaReducer.h */,
+				F7AE86D21881B23400ECFFC2 /* RetinaReducer.m */,
+			);
+			name = "Retina Reducer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +334,7 @@
 				F7EF6A10188163830078A63A /* RetinaDropView.m in Sources */,
 				F717E84B187FE5E5007EF344 /* main.m in Sources */,
 				F7AE86D31881B23400ECFFC2 /* RetinaReducer.m in Sources */,
+				F717E89A18838DCC007EF344 /* ColorPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

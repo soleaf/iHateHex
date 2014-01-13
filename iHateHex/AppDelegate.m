@@ -8,12 +8,25 @@
 
 #import "AppDelegate.h"
 #import "ColorConverter.h"
+#import "ColorPicker.h"
 
 @interface AppDelegate () < NSTextFieldDelegate >
 
+// ColorPicker
+{
+    uint32 windowID;
+    
+}
+@property (retain) NSTimer *updateTimer;
+@property (assign) BOOL updateMouseLocation;
+@property (assign) NSPoint mouseLocation;
 @end
 
 @implementation AppDelegate
+
+@synthesize updateTimer;
+@synthesize updateMouseLocation;
+@synthesize mouseLocation;
 
 #pragma mark - NSApplicationDelegate
 
@@ -34,7 +47,20 @@
         NSInteger quality = [[[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual] integerValue];
         [self.ui_settingRetinaReducerQuality selectItemAtIndex:quality];
     }
-        
+ 
+    // ColorPicker
+    [self startGetMouseLocation];
+    self.ui_colorPickerImageView.imageScaling = NSScaleProportionally;
+    
+    // GetCurrentWIndowId
+    NSArray *windowList = (__bridge NSArray *)CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
+    for (NSDictionary *info in windowList) {
+        if ([[info objectForKey:(NSString *)kCGWindowOwnerName] isEqualToString:@"iHateHex"] && ![[info objectForKey:(NSString *)kCGWindowName] isEqualToString:@""]) {
+            NSInteger exId = [[info objectForKey:(NSString *)kCGWindowNumber] integerValue];
+            windowID = (uint32) exId;
+        }
+    }
+    
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
@@ -42,6 +68,12 @@
     [self.window makeKeyAndOrderFront:self];
     return NO;
 }
+
+
+#pragma mark - Functions
+
+
+
 
 #pragma mark - Window
 
@@ -197,6 +229,67 @@
 
 
 #pragma mark - ColorConvert
+
+#pragma mark - ColorPicker
+- (void)startCaptureScreen
+{
+    // Start mouse capturing
+    [self startGetMouseLocation];
+    [self.colorPickerCursorView setLevel: NSPopUpMenuWindowLevel];
+    
+    // HideMouseCursor
+    [NSCursor hide];
+}
+
+#pragma mark - MouseLocation
+- (void)startGetMouseLocation
+{
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.03f target:self selector:@selector(geMouseLocationTick) userInfo:nil repeats:YES];
+}
+
+- (void)stopGetMouseLocation
+{
+    [self.updateTimer invalidate];
+    self.updateTimer = nil;
+}
+
+- (void)geMouseLocationTick
+{
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
+        
+        mouseLocation = [NSEvent mouseLocation];
+        NSScreen *principalScreen = [[NSScreen screens] objectAtIndex:0];
+        mouseLocation = NSMakePoint(mouseLocation.x, principalScreen.frame.size.height - mouseLocation.y);
+        NSImage *iamage = [ColorPicker imageAtLocation:mouseLocation excludeWindowId:windowID];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+           
+            
+            self.ui_colorPickerImageView.image = iamage;
+            self.ui_colorPickerImageView.image.size = CGSizeMake(500, 500);
+            
+            //    CGRect cursorViewNewFrame = self.colorPickerCursorView.frame;
+            //    cursorViewNewFrame.origin.x = mouseLocation.x;
+            //    cursorViewNewFrame.origin.y = mouseLocation.y;
+            //    NSLog(@"%f %f - %f %f", cursorViewNewFrame.origin.x, cursorViewNewFrame.origin.y, mouseLocation.x, mouseLocation.y);
+            //    [self.colorPickerCursorView setFrame:cursorViewNewFrame display:YES];
+            //
+            NSPoint p = [NSEvent mouseLocation];
+            //
+            NSRect f = [self.colorPickerCursorView frame];
+            //    if (!NSPointInRect(p, f)) {
+            p.x -= f.size.width / 2.0;
+            p.y -= f.size.height / 2.0;
+            [self.colorPickerCursorView setFrameOrigin:p];
+            NSLog(@"%s Moved window to (%.1f, %1.f)", __PRETTY_FUNCTION__, p.x, p.y);
+            //    }
+        });
+    });
+    
+
+}
+
 
 
 @end
