@@ -29,6 +29,7 @@ static NSString* const DefaultUserKeySettingColorPickerAutoCopy = @"setting_colo
 @property (weak) IBOutlet RetinaDropView *ui_retinaReduceDropView;
 @property (weak) IBOutlet NSTextField *ui_retinaReducerTip;
 @property (weak) IBOutlet NSButton *ui_retinaReducerRevealInFinder;
+@property (weak) IBOutlet NSProgressIndicator *ui_retinaReducerProgressbar;
 @property (weak) IBOutlet NSPopUpButton *ui_settingRetinaReducerQuality;
 @property (weak) IBOutlet NSPopUpButton *ui_settingColorPickerAutocopy;
 @property (weak) IBOutlet NSImageView *ui_colorPickerImageView;

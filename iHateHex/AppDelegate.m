@@ -62,18 +62,19 @@
 {
     // Retina Reducer
     self.ui_retinaReducerRevealInFinder.state =
-    ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeyRetinaRevealInFinder] ? 0: 1) ; // Defualt checked.
+        ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeyRetinaRevealInFinder] ? 0: 1) ; // Defualt checked.
+    self.ui_retinaReduceDropView.afterRevealInFinder = self.ui_retinaReducerRevealInFinder.state;
     
+    // Setting Retina Qual.
     if ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual]){
         NSInteger quality = [[[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingRetianReducerQual] integerValue];
         [self.ui_settingRetinaReducerQuality selectItemAtIndex:quality];
     }
     
-    
     // ColorPicker
-    
     if ([[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingColorPickerAutoCopy]){
-        NSInteger autoCopyType = [[[NSUserDefaults standardUserDefaults] objectForKey:DefaultUserKeySettingColorPickerAutoCopy] integerValue];
+        NSInteger autoCopyType = [[[NSUserDefaults standardUserDefaults]
+                                   objectForKey:DefaultUserKeySettingColorPickerAutoCopy] integerValue];
         [self.ui_settingColorPickerAutocopy selectItemAtIndex:autoCopyType];
     }
 }
