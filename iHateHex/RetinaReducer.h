@@ -12,6 +12,7 @@
 
 @property NSImageInterpolation pngQuality;
 
-- (void) reduceFiles:(NSArray*)fileList andAfeterRevelInFinder:(BOOL) isRevealInFinder;
+- (void) reduceFiles:(NSArray*)fileList andAfeterRevelInFinder:(BOOL) isRevealInFinder
+            complete:(void(^)(void)) complete;
 
 @end

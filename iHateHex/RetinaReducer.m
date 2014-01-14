@@ -10,7 +10,7 @@
 
 @implementation RetinaReducer
 
-- (void) reduceFiles:(NSArray*)fileList andAfeterRevelInFinder:(BOOL) isRevealInFinder
+- (void) reduceFiles:(NSArray*)fileList andAfeterRevelInFinder:(BOOL) isRevealInFinder complete:(void (^)(void))complete
 {
     NSMutableString *errorLog = [[NSMutableString alloc] init];
     
@@ -23,100 +23,109 @@
     // Check File Types
     //TODO: ..
     
-    
-    // Make NSImages
-    NSMutableArray *images = [[NSMutableArray alloc] init];
-    for (NSString *path in fileList) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
+  
         
-        @try {
+        // Make NSImages
+        NSMutableArray *images = [[NSMutableArray alloc] init];
+        for (NSString *path in fileList) {
             
-            // Get
-            NSImage *fullSizeImage = [[NSImage alloc] initWithContentsOfFile:path];
-            NSString *filename = [path lastPathComponent];
-            
-            // Reduce
-            CGSize newSize = [self sizeOfRetinaImageToReduce:fullSizeImage];
-            NSImage *reducedImage = [self imageResize:fullSizeImage newSize:newSize];
-            
-            if (!fullSizeImage || !reducedImage){
-                NSLog(@"----- >>>>>> No Image");
-                continue;
+            @try {
+                
+                // Get
+                NSImage *fullSizeImage = [[NSImage alloc] initWithContentsOfFile:path];
+                NSString *filename = [path lastPathComponent];
+                
+                // Reduce
+                CGSize newSize = [self sizeOfRetinaImageToReduce:fullSizeImage];
+                NSImage *reducedImage = [self imageResize:fullSizeImage newSize:newSize];
+                
+                if (!fullSizeImage || !reducedImage){
+                    NSLog(@"----- >>>>>> No Image");
+                    continue;
+                }
+                
+                [images addObject:@{@"fileName" : filename,
+                                    @"fullSizeImage" : fullSizeImage,
+                                    @"reducedImage" : reducedImage}];
+                
+            }
+            @catch (NSException *exception) {
+                
+                NSLog(@"Err[Make NSImages] ------------> %@", exception.description);
+                [errorLog appendString:@"\n"];
+                [errorLog appendString:exception.description];
+                
             }
             
-            [images addObject:@{@"fileName" : filename,
-                                @"fullSizeImage" : fullSizeImage,
-                                @"reducedImage" : reducedImage}];
-            
-        }
-        @catch (NSException *exception) {
-            
-            NSLog(@"Err[Make NSImages] ------------> %@", exception.description);
-            [errorLog appendString:@"\n"];
-            [errorLog appendString:exception.description];
-            
         }
         
-    }
-    
-    
-    // Save
-    NSMutableArray *fileURLS = [[NSMutableArray alloc] init];
-    for (NSDictionary *info in images) {
         
-        @try {
+        // Save
+        NSMutableArray *fileURLS = [[NSMutableArray alloc] init];
+        for (NSDictionary *info in images) {
             
-            NSString *originFileName    = [info objectForKey:@"fileName"];
-            NSImage *fullSizeImage      = [info objectForKey:@"fullSizeImage"];
-            NSImage *reducedImage       = [info objectForKey:@"reducedImage"];
-            
-            originFileName              = [originFileName stringByReplacingOccurrencesOfString:@"@2x" withString:@""];
-            originFileName              = [originFileName stringByReplacingOccurrencesOfString:@".png" withString:@""];
-            
-            NSString *fullSizeFileName  = [NSString stringWithFormat:@"%@@2x.png",originFileName];
-            NSString *reducedFileName   = [NSString stringWithFormat:@"%@.png", originFileName];
-            
-            NSLog(@"origin file name:%@",fullSizeFileName);
-            NSLog(@"reduced file name:%@",reducedFileName);
-            
-            NSString *fullSizePath      = [NSString stringWithFormat:@"%@/%@",destination, fullSizeFileName];
-            NSString *reducedSizePath   = [NSString stringWithFormat:@"%@/%@",destination, reducedFileName];
-            
-            [self saveImage:fullSizeImage toFile:fullSizePath];
-            [self saveImage:reducedImage toFile:reducedSizePath];
-            
-            NSURL *fullSizeFileURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"file://%@",fullSizePath]];
-            NSURL *reducedFileURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"file://%@",reducedSizePath]];
-            
-            [fileURLS addObject:fullSizeFileURL];
-            [fileURLS addObject:reducedFileURL];
-            
-        }
-        @catch (NSException *exception) {
-            
-            NSLog(@"Err [Save] ------------> %@", exception.description);
-            [errorLog appendString:@"\n"];
-            [errorLog appendString:exception.description];
+            @try {
+                
+                NSString *originFileName    = [info objectForKey:@"fileName"];
+                NSImage *fullSizeImage      = [info objectForKey:@"fullSizeImage"];
+                NSImage *reducedImage       = [info objectForKey:@"reducedImage"];
+                
+                originFileName              = [originFileName stringByReplacingOccurrencesOfString:@"@2x" withString:@""];
+                originFileName              = [originFileName stringByReplacingOccurrencesOfString:@".png" withString:@""];
+                
+                NSString *fullSizeFileName  = [NSString stringWithFormat:@"%@@2x.png",originFileName];
+                NSString *reducedFileName   = [NSString stringWithFormat:@"%@.png", originFileName];
+                
+                NSLog(@"origin file name:%@",fullSizeFileName);
+                NSLog(@"reduced file name:%@",reducedFileName);
+                
+                NSString *fullSizePath      = [NSString stringWithFormat:@"%@/%@",destination, fullSizeFileName];
+                NSString *reducedSizePath   = [NSString stringWithFormat:@"%@/%@",destination, reducedFileName];
+                
+                [self saveImage:fullSizeImage toFile:fullSizePath];
+                [self saveImage:reducedImage toFile:reducedSizePath];
+                
+                NSURL *fullSizeFileURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"file://%@",fullSizePath]];
+                NSURL *reducedFileURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"file://%@",reducedSizePath]];
+                
+                [fileURLS addObject:fullSizeFileURL];
+                [fileURLS addObject:reducedFileURL];
+                
+            }
+            @catch (NSException *exception) {
+                
+                NSLog(@"Err [Save] ------------> %@", exception.description);
+                [errorLog appendString:@"\n"];
+                [errorLog appendString:exception.description];
+                
+            }
             
         }
         
-    }
-    
-    if (errorLog.length > 0){
-        NSAlert *alert = [[NSAlert alloc] init];
+        if (errorLog.length > 0){
+            NSAlert *alert = [[NSAlert alloc] init];
+            
+            [alert addButtonWithTitle:@"OK"];
+            [alert setMessageText:@"Error"];
+            [alert setInformativeText:errorLog];
+            [alert setAlertStyle:NSWarningAlertStyle];
+        }
         
-        [alert addButtonWithTitle:@"OK"];
-        [alert setMessageText:@"Error"];
-        [alert setInformativeText:errorLog];
-        [alert setAlertStyle:NSWarningAlertStyle];
-    }
+        dispatch_async(dispatch_get_main_queue(), ^{
+        
+            // Reveal In Finder
+            if (isRevealInFinder)
+                [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:fileURLS];
+            
+            
+            [[NSSound soundNamed:@"Pop"] play];
+            if (complete) complete();
+            
+        });
+    });
     
     
-    // Reveal In Finder
-    if (isRevealInFinder)
-        [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:fileURLS];
-    
-    
-    [[NSSound soundNamed:@"Pop"] play];
     
 }
 

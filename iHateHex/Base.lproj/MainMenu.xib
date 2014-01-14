@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -88,7 +88,7 @@
                 <outlet property="ui_hexNSColorField" destination="aP7-fH-kI3" id="OpB-FU-CNo"/>
                 <outlet property="ui_hexUIColorField" destination="tWN-ZP-xUl" id="gm5-sh-4w4"/>
                 <outlet property="ui_retinaReduceDropView" destination="VW8-EG-jL5" id="4R6-n4-EII"/>
-                <outlet property="ui_retinaReducerProgressbar" destination="dhK-w4-dME" id="LKS-lh-xFP"/>
+                <outlet property="ui_retinaReducerProgressbar" destination="68M-UM-Er0" id="13b-is-ehX"/>
                 <outlet property="ui_retinaReducerRevealInFinder" destination="TVt-b6-XEe" id="9EY-A7-gtc"/>
                 <outlet property="ui_retinaReducerTip" destination="fYg-II-Dq1" id="Vjs-zx-jEe"/>
                 <outlet property="ui_settingColorPickerAutocopy" destination="8rt-KZ-0zF" id="SxB-t1-4OC"/>
@@ -97,21 +97,18 @@
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
-        <window title="iHateHex" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="3Aj-KQ-hhF" customClass="SNRHUDWindow">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+        <window title="iHateHex" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="3Aj-KQ-hhF" customClass="SNRHUDWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1017" y="80" width="225" height="348"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="cWy-KU-6El">
                 <rect key="frame" x="0.0" y="0.0" width="225" height="348"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <tabView drawsBackground="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="ZnK-x3-kAN">
+                    <tabView fixedFrame="YES" drawsBackground="NO" allowsTruncatedLabels="NO" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="ZnK-x3-kAN">
                         <rect key="frame" x="0.0" y="0.0" width="225" height="291"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="225" id="1eB-66-T0c"/>
-                        </constraints>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Tab" identifier="1" id="0sh-Vf-WPQ">
@@ -253,6 +250,10 @@
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
+                                                <progressIndicator fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="68M-UM-Er0">
+                                                    <rect key="frame" x="22" y="53" width="156" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </progressIndicator>
                                             </subviews>
                                         </customView>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVZ-V1-ZGj">
@@ -282,15 +283,11 @@
                                                 <action selector="clickedReducerRevealInFinder:" target="494" id="T7O-t8-tzn"/>
                                             </connections>
                                         </button>
-                                        <progressIndicator hidden="YES" fixedFrame="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="dhK-w4-dME">
-                                            <rect key="frame" x="31" y="217" width="165" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
                                     </subviews>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Item 2" identifier="" id="TbS-YY-fq7">
-                                <view key="view" id="kDB-oZ-Gya">
+                                <view key="view" ambiguous="YES" id="kDB-oZ-Gya">
                                     <rect key="frame" x="0.0" y="0.0" width="225" height="291"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -430,23 +427,18 @@ DQ
                         </connections>
                     </segmentedControl>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="ZnK-x3-kAN" firstAttribute="leading" secondItem="cWy-KU-6El" secondAttribute="leading" id="5l2-1F-9dp"/>
-                    <constraint firstItem="ZnK-x3-kAN" firstAttribute="top" secondItem="cWy-KU-6El" secondAttribute="top" constant="57" id="Ume-tZ-ptq"/>
-                    <constraint firstAttribute="bottom" secondItem="ZnK-x3-kAN" secondAttribute="bottom" id="f8o-a7-LiM"/>
-                </constraints>
             </view>
         </window>
-        <window title="iHateHexColorPickerWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="eSx-c5-K0u">
+        <window title="iHateHexColorPickerWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="eSx-c5-K0u">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="207" width="100" height="100"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="contentRect" x="196" y="207" width="99" height="99"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="Oi1-R2-DjQ">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7j-Ci-9nH">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <rect key="frame" x="0.0" y="-1" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="SzY-HT-2UZ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -457,16 +449,16 @@ DQ
                         </connections>
                     </button>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-57-bSM" customClass="NSImageView">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <colorWell fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcB-WX-7wL">
-                                <rect key="frame" x="75" y="3" width="20" height="20"/>
+                                <rect key="frame" x="75" y="4" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </colorWell>
                             <box autoresizesSubviews="NO" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-U0-pb4">
-                                <rect key="frame" x="46" y="-4" width="5" height="108"/>
+                                <rect key="frame" x="49" y="-4" width="5" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

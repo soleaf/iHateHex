@@ -11,6 +11,8 @@
 @interface RetinaDropView : NSView <NSDraggingDestination>
 @property NSTextField *tipLabel;
 @property NSPopUpButton *settingRetinaPngQuality;
+@property NSProgressIndicator *progressbar;
 @property BOOL afterRevealInFinder;
+
 
 @end

@@ -7,12 +7,10 @@
 //
 
 #import "ColorPicker.h"
-#define kWidth 14
-#define kHeight 14
+#define kWidth 12
+#define kHeight 12
 
 @implementation ColorPicker
-
-#pragma mark -
 
 + (NSImage *)imageForLocation:(NSPoint)mouseLocation
 {

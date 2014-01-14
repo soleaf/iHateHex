@@ -41,7 +41,7 @@
     
     self.ui_retinaReduceDropView.tipLabel = self.ui_retinaReducerTip;
     self.ui_retinaReduceDropView.settingRetinaPngQuality = self.ui_settingRetinaReducerQuality;
-    
+    self.ui_retinaReduceDropView.progressbar = self.ui_retinaReducerProgressbar;
     
     [self loadSettings];
  
@@ -219,6 +219,7 @@
     
     // Change Tab
     NSSegmentedControl *segmentedCtr = (NSSegmentedControl*)sender;
+
     [self.tabView selectTabViewItemAtIndex:segmentedCtr.selectedSegment];
     
     CGFloat height = 350;
@@ -239,8 +240,9 @@
     
     NSRect newFrame = self.window.frame;
     newFrame.size.height = height;
-    [_window setFrame:newFrame display:YES animate:YES];
-    
+    [self.window setFrame:newFrame display:YES animate:NO];
+    [self.window viewsNeedDisplay];
+//    
 //
 //    NSRect newFrame = self.window.frame;
 //    NSView *selectedTabView = (NSView*) [self.tabView tabViewItemAtIndex:segmentedCtr.selectedSegment].view;
@@ -320,6 +322,7 @@
 
 - (void)startColorPickerView
 {
+    self.colorPickerCursorView.alphaValue = .0;
     [self.colorPickerCursorView makeKeyAndOrderFront:self];
     [NSApp activateIgnoringOtherApps:YES];
 
@@ -337,6 +340,8 @@
 
 - (void)stopColorPickerView
 {
+    self.colorPickerCursorView.alphaValue = .0;
+    
     [self stopGetMouseLocation];
     [self.colorPickerCursorView orderOut:self];
     
@@ -392,7 +397,7 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
            
-            
+            self.colorPickerCursorView.alphaValue = 1.;
             self.ui_colorPickerImageView.image = iamage;
             self.ui_colorPickerImageView.image.size = CGSizeMake(500, 500);
             

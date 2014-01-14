@@ -12,7 +12,6 @@
 @interface RetinaDropView()
 {
     BOOL isHighlighted;
-    RetinaReducer *retinaReducer;
 }
 @property (assign, setter=setHighlighted:) BOOL isHighlighted;
 
@@ -31,7 +30,6 @@
         self.layer.masksToBounds = YES;
         self.layer.cornerRadius = 10.0; // Why not working??
         
-        retinaReducer = [[RetinaReducer alloc] init];
     }
     return self;
 }
@@ -96,11 +94,18 @@
         default:
             break;
     }
-    retinaReducer.pngQuality = settedQuality;
     
-    [retinaReducer reduceFiles:draggedFilePaths andAfeterRevelInFinder:self.afterRevealInFinder];
-    
+    [self.progressbar startAnimation:self];
     [self setHighlighted:NO];
+    
+    RetinaReducer *retinaReducer = [[RetinaReducer alloc] init];
+    retinaReducer.pngQuality = settedQuality;
+    [retinaReducer reduceFiles:draggedFilePaths andAfeterRevelInFinder:self.afterRevealInFinder complete:^{
+        
+        [self.progressbar stopAnimation:self];
+        
+    }];
+    
     return YES;
 }
 
