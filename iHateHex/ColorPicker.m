@@ -32,28 +32,31 @@
 {
     
     CGRect imageRect = CGRectMake(mouseLocation.x - kWidth / 2, mouseLocation.y - kHeight / 2, kWidth, kHeight);
+    
     CFArrayRef windowIDList = CGWindowListCreate(kCGWindowListOptionOnScreenBelowWindow,excludeID);
     CGImageRef imageRef = CGWindowListCreateImageFromArray(imageRect,windowIDList, kCGWindowImageBestResolution);
     
     NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
-    // Create an NSImage and add the bitmap rep to it...
     NSImage *image = [[NSImage alloc] init];
     [image addRepresentation:bitmapRep];
+    
+    CGImageRelease(imageRef);
     
     return image;
 }
 
-+ (NSColor *)colorAtLocation:(NSPoint)mouseLocation
++ (NSColor *)colorAtLocation:(NSPoint)mouseLocation excludeWindowId:(uint32)excludeID
 {   
     CGRect imageRect = CGRectMake(mouseLocation.x, mouseLocation.y, 1, 1);
     
-    CGImageRef imageRef = CGWindowListCreateImage(imageRect, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
+    CFArrayRef windowIDList = CGWindowListCreate(kCGWindowListOptionOnScreenBelowWindow,excludeID);
+    CGImageRef imageRef = CGWindowListCreateImageFromArray(imageRect,windowIDList, kCGWindowImageBestResolution);
     
-    NSBitmapImageRep *bitmap = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
+    NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
     
     CGImageRelease(imageRef);
 
-    return [bitmap colorAtX:0 y:0];
+    return [bitmapRep colorAtX:0 y:0];
 }
 
 @end

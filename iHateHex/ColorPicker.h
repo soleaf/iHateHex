@@ -10,8 +10,7 @@
 
 @interface ColorPicker : NSObject
 
-+ (NSImage *)imageForLocation:(NSPoint)mouseLocation;
 + (NSImage *)imageAtLocation:(NSPoint)mouseLocation excludeWindowId:(uint32)excludeID;
-+ (NSColor *)colorAtLocation:(NSPoint)mouseLocation;
++ (NSColor *)colorAtLocation:(NSPoint)mouseLocation excludeWindowId:(uint32)excludeID;
 
 @end

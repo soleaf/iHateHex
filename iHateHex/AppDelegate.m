@@ -50,6 +50,8 @@
     [self registerHotKey];
     
     [self stopColorPickerView];
+    
+  
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
@@ -301,11 +303,9 @@
 #pragma mark - ColorConvert
 
 #pragma mark - ColorPicker
-- (void)startColorPickerView
-{
-    [self.colorPickerCursorView makeKeyAndOrderFront:self];
-    [NSApp activateIgnoringOtherApps:YES];
 
+- (void) getMyWindowID
+{
     // GetCurrentWIndowId
     NSArray *windowList = (__bridge NSArray *)CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
     for (NSDictionary *info in windowList) {
@@ -316,6 +316,14 @@
             NSLog(@"info:%@",info);
         }
     }
+}
+
+- (void)startColorPickerView
+{
+    [self.colorPickerCursorView makeKeyAndOrderFront:self];
+    [NSApp activateIgnoringOtherApps:YES];
+
+    [self getMyWindowID];
     
     // Start mouse capturing
     [self startGetMouseLocation];
@@ -338,7 +346,7 @@
 
 - (IBAction)clickedColorPickerView:(id)sender {
     
-    self.ui_hexColPicker.color = [ColorPicker colorAtLocation:mouseLocation];
+    self.ui_hexColPicker.color = [ColorPicker colorAtLocation:mouseLocation excludeWindowId:windowID];
     [self changedHexColorPicker:self.ui_hexColPicker];
     
     [self stopColorPickerView];
@@ -396,7 +404,7 @@
             [self.colorPickerCursorView setFrameOrigin:p];
 
             // Sampling Color
-            self.ui_colorPickerCursorColor.color = [ColorPicker colorAtLocation:mouseLocation];
+            self.ui_colorPickerCursorColor.color = [ColorPicker colorAtLocation:mouseLocation excludeWindowId:windowID];
         });
     });
     
