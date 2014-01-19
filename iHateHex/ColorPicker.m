@@ -7,8 +7,8 @@
 //
 
 #import "ColorPicker.h"
-#define kWidth 12
-#define kHeight 12
+#define kWidth 10
+#define kHeight 10
 
 @implementation ColorPicker
 

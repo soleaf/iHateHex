@@ -21,6 +21,8 @@
 		F717E867187FE5E5007EF344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F717E865187FE5E5007EF344 /* InfoPlist.strings */; };
 		F717E869187FE5E5007EF344 /* iHateHexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E868187FE5E5007EF344 /* iHateHexTests.m */; };
 		F717E89A18838DCC007EF344 /* ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E89918838DCC007EF344 /* ColorPicker.m */; };
+		F7A0C5EA188BFD1500186097 /* pickerGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A0C5E9188BFD1500186097 /* pickerGrid.png */; };
+		F7A0C5ED188C267500186097 /* ColorPickerSampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A0C5EC188C267500186097 /* ColorPickerSampleView.m */; };
 		F7A687AF18823AB800B55793 /* ColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A687AE18823AB800B55793 /* ColorConverter.m */; };
 		F7AE86D31881B23400ECFFC2 /* RetinaReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AE86D21881B23400ECFFC2 /* RetinaReducer.m */; };
 		F7C4E67418829A5900E2D949 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C4E67318829A5900E2D949 /* Images.xcassets */; };
@@ -62,6 +64,9 @@
 		F717E868187FE5E5007EF344 /* iHateHexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHateHexTests.m; sourceTree = "<group>"; };
 		F717E89818838DCC007EF344 /* ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPicker.h; sourceTree = "<group>"; };
 		F717E89918838DCC007EF344 /* ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPicker.m; sourceTree = "<group>"; };
+		F7A0C5E9188BFD1500186097 /* pickerGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerGrid.png; sourceTree = "<group>"; };
+		F7A0C5EB188C267500186097 /* ColorPickerSampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerSampleView.h; sourceTree = "<group>"; };
+		F7A0C5EC188C267500186097 /* ColorPickerSampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerSampleView.m; sourceTree = "<group>"; };
 		F7A687AD18823AB800B55793 /* ColorConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConverter.h; sourceTree = "<group>"; };
 		F7A687AE18823AB800B55793 /* ColorConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorConverter.m; sourceTree = "<group>"; };
 		F7AE86D11881B23400ECFFC2 /* RetinaReducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetinaReducer.h; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 				F717E89B18838DD1007EF344 /* Retina Reducer */,
 				F717E853187FE5E5007EF344 /* MainMenu.xib */,
 				F7C4E67318829A5900E2D949 /* Images.xcassets */,
+				F7A0C5E9188BFD1500186097 /* pickerGrid.png */,
 				F717E845187FE5E5007EF344 /* Supporting Files */,
 			);
 			path = iHateHex;
@@ -188,6 +194,8 @@
 			children = (
 				F717E89818838DCC007EF344 /* ColorPicker.h */,
 				F717E89918838DCC007EF344 /* ColorPicker.m */,
+				F7A0C5EB188C267500186097 /* ColorPickerSampleView.h */,
+				F7A0C5EC188C267500186097 /* ColorPickerSampleView.m */,
 				F7A687AD18823AB800B55793 /* ColorConverter.h */,
 				F7A687AE18823AB800B55793 /* ColorConverter.m */,
 			);
@@ -283,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A0C5EA188BFD1500186097 /* pickerGrid.png in Resources */,
 				F717E849187FE5E5007EF344 /* InfoPlist.strings in Resources */,
 				F7C4E67418829A5900E2D949 /* Images.xcassets in Resources */,
 				F717E84F187FE5E5007EF344 /* Credits.rtf in Resources */,
@@ -342,6 +351,7 @@
 				F7A687AF18823AB800B55793 /* ColorConverter.m in Sources */,
 				F7EF6A10188163830078A63A /* RetinaDropView.m in Sources */,
 				F717E84B187FE5E5007EF344 /* main.m in Sources */,
+				F7A0C5ED188C267500186097 /* ColorPickerSampleView.m in Sources */,
 				F7AE86D31881B23400ECFFC2 /* RetinaReducer.m in Sources */,
 				F717E89A18838DCC007EF344 /* ColorPicker.m in Sources */,
 				F7174DDB1883E59400D8F8E5 /* DDHotKeyCenter.m in Sources */,

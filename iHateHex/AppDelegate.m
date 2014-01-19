@@ -16,9 +16,8 @@
 
 // ColorPicker
 {
-    uint32 windowID;
-    
-    DDHotKeyCenter *colorPickerHotkeys;
+    uint32 windowID; // To exclude this window on screen capture
+    DDHotKeyCenter *colorPickerHotkeys; // Shortcut key managing
 }
 
 @property (retain) NSTimer *updateTimer;
@@ -49,10 +48,9 @@
  
     // ColorPicker
     self.ui_colorPickerImageView.imageScaling = NSScaleProportionally;
+    self.ui_colorPickerGrid.image = [NSImage imageNamed:@"pickerGrid.png"];
     [self registerHotKey];
-    
     [self stopColorPickerView];
-    
   
 }
 
@@ -419,12 +417,12 @@
         mouseLocation = [NSEvent mouseLocation];
         NSScreen *principalScreen = [[NSScreen screens] objectAtIndex:0];
         mouseLocation = NSMakePoint(mouseLocation.x, principalScreen.frame.size.height - mouseLocation.y);
-        NSImage *iamage = [ColorPicker imageAtLocation:mouseLocation excludeWindowId:windowID];
+        NSImage *image = [ColorPicker imageAtLocation:mouseLocation excludeWindowId:windowID];
         
         dispatch_async(dispatch_get_main_queue(), ^{
            
             self.colorPickerCursorView.alphaValue = 1.;
-            self.ui_colorPickerImageView.image = iamage;
+            self.ui_colorPickerImageView.image = image;
             self.ui_colorPickerImageView.image.size = CGSizeMake(500, 500);
             
             // Move Window
@@ -435,7 +433,7 @@
             [self.colorPickerCursorView setFrameOrigin:p];
 
             // Sampling Color
-            self.ui_colorPickerCursorColor.color = [ColorPicker colorAtLocation:mouseLocation excludeWindowId:windowID];
+            [self.ui_colorPickerSampleView setBackground:[ColorPicker colorAtLocation:mouseLocation excludeWindowId:windowID]];
         });
     });
     

@@ -300,8 +300,9 @@
             <connections>
                 <outlet property="colorPickerCursorView" destination="eSx-c5-K0u" id="4Yu-8w-dpQ"/>
                 <outlet property="tabView" destination="ZnK-x3-kAN" id="Jhy-Be-YcC"/>
-                <outlet property="ui_colorPickerCursorColor" destination="JcB-WX-7wL" id="aCP-CE-jLy"/>
+                <outlet property="ui_colorPickerGrid" destination="7lY-mA-rZr" id="HFk-Qc-8OQ"/>
                 <outlet property="ui_colorPickerImageView" destination="zEp-57-bSM" id="mWc-Gh-psa"/>
+                <outlet property="ui_colorPickerSampleView" destination="1xT-uP-YPL" id="OfA-hb-CIQ"/>
                 <outlet property="ui_hexColPicker" destination="AfZ-Rx-JgR" id="zbe-Dz-zX5"/>
                 <outlet property="ui_hexHexField" destination="NfQ-gG-Y8N" id="0HT-PZ-z4u"/>
                 <outlet property="ui_hexNSColorField" destination="aP7-fH-kI3" id="OpB-FU-CNo"/>
@@ -331,12 +332,11 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Tab" identifier="1" id="0sh-Vf-WPQ">
-                                <view key="view" id="OVc-Wp-xFK">
-                                    <rect key="frame" x="0.0" y="0.0" width="225" height="291"/>
+                                <view key="view" ambiguous="YES" id="OVc-Wp-xFK">
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZTo-OM-3ja">
-                                            <rect key="frame" x="15" y="53" width="192" height="33"/>
+                                            <rect key="frame" x="15" y="-238" width="192" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" title="Screen Color Picker" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mFo-cT-M9t" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -347,7 +347,7 @@
                                             </connections>
                                         </button>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfQ-gG-Y8N">
-                                            <rect key="frame" x="17" y="223" width="161" height="22"/>
+                                            <rect key="frame" x="17" y="-68" width="161" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Hex" drawsBackground="YES" id="Yf0-5I-c22" customClass="SNRHUDTextFieldCell">
                                                 <font key="font" metaFont="system"/>
@@ -360,7 +360,7 @@
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tWN-ZP-xUl">
-                                            <rect key="frame" x="17" y="155" width="161" height="22"/>
+                                            <rect key="frame" x="17" y="-136" width="161" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="UIColor" drawsBackground="YES" id="66m-8U-A6g" customClass="SNRHUDTextFieldCell">
                                                 <font key="font" size="13" name="LucidaGrande"/>
@@ -372,7 +372,7 @@
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aP7-fH-kI3">
-                                            <rect key="frame" x="16" y="189" width="162" height="22"/>
+                                            <rect key="frame" x="16" y="-102" width="162" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="NSColor" drawsBackground="YES" id="KW2-eA-g2R" customClass="SNRHUDTextFieldCell">
                                                 <font key="font" size="13" name="LucidaGrande"/>
@@ -385,7 +385,7 @@
                                             </connections>
                                         </textField>
                                         <button toolTip="Copy HexCode" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="jxk-v1-9Jd">
-                                            <rect key="frame" x="186" y="223" width="23" height="22"/>
+                                            <rect key="frame" x="186" y="-68" width="23" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" title="📄" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hfz-7f-EdY" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -396,7 +396,7 @@
                                             </connections>
                                         </button>
                                         <button toolTip="Copy UIColor Code" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3gd-bh-yXv">
-                                            <rect key="frame" x="186" y="155" width="23" height="22"/>
+                                            <rect key="frame" x="186" y="-136" width="23" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" title="📄" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qN5-qb-O6N" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -407,7 +407,7 @@
                                             </connections>
                                         </button>
                                         <button toolTip="Copy NSColor Code" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="rUo-FQ-6ED">
-                                            <rect key="frame" x="186" y="189" width="23" height="22"/>
+                                            <rect key="frame" x="186" y="-102" width="23" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" title="📄" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fl3-QF-FWi" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -418,7 +418,7 @@
                                             </connections>
                                         </button>
                                         <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfZ-Rx-JgR" customClass="BFPopoverColorWell">
-                                            <rect key="frame" x="98" y="265" width="30" height="23"/>
+                                            <rect key="frame" x="98" y="-26" width="30" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -426,7 +426,7 @@
                                             </connections>
                                         </colorWell>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21Q-B6-PLj">
-                                            <rect key="frame" x="15" y="109" width="196" height="34"/>
+                                            <rect key="frame" x="15" y="-182" width="196" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Input one, others will changed to new conveted color codes" id="OKD-jZ-Vmg">
                                                 <font key="font" size="11" name="LucidaGrande"/>
@@ -435,14 +435,14 @@
                                             </textFieldCell>
                                         </textField>
                                         <box autoresizesSubviews="NO" verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bqb-yh-pMz">
-                                            <rect key="frame" x="0.0" y="98" width="225" height="5"/>
+                                            <rect key="frame" x="0.0" y="-193" width="225" height="5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-Az-Cqc">
-                                            <rect key="frame" x="12" y="14" width="196" height="34"/>
+                                            <rect key="frame" x="12" y="-277" width="196" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="⌃ + ⌥ + ⌘ + C" id="GAE-pK-idK">
                                                 <font key="font" size="9" name="LucidaGrande"/>
@@ -508,7 +508,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Item 2" identifier="" id="TbS-YY-fq7">
-                                <view key="view" ambiguous="YES" id="kDB-oZ-Gya">
+                                <view key="view" id="kDB-oZ-Gya">
                                     <rect key="frame" x="0.0" y="0.0" width="225" height="291"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -638,14 +638,14 @@ Screen ColorPicker</string>
         </window>
         <window title="iHateHexColorPickerWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="eSx-c5-K0u">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="207" width="99" height="99"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <rect key="contentRect" x="196" y="207" width="90" height="90"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="Oi1-R2-DjQ">
-                <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
+                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7j-Ci-9nH">
-                        <rect key="frame" x="0.0" y="-1" width="100" height="100"/>
+                        <rect key="frame" x="0.0" y="-10" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="SzY-HT-2UZ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -656,28 +656,17 @@ Screen ColorPicker</string>
                         </connections>
                     </button>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zEp-57-bSM" customClass="NSImageView">
-                        <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lY-mA-rZr" customClass="NSImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <colorWell fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcB-WX-7wL">
-                                <rect key="frame" x="75" y="4" width="20" height="20"/>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xT-uP-YPL" customClass="ColorPickerSampleView">
+                                <rect key="frame" x="65" y="7" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </colorWell>
-                            <box autoresizesSubviews="NO" horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-U0-pb4">
-                                <rect key="frame" x="49" y="-4" width="5" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
-                            </box>
-                            <box autoresizesSubviews="NO" verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Hu5-pv-n0a">
-                                <rect key="frame" x="-4" y="47" width="103" height="5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
-                            </box>
+                            </customView>
                         </subviews>
                     </customView>
                 </subviews>
