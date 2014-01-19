@@ -17,6 +17,8 @@
 // ColorPicker
 {
     uint32 windowID;
+    
+    DDHotKeyCenter *colorPickerHotkeys;
 }
 
 @property (retain) NSTimer *updateTimer;
@@ -87,12 +89,14 @@
 #pragma mark - HotKey
 - (void)registerHotKey
 {
-    DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
-    if (![c registerHotKeyWithKeyCode:kVK_ANSI_C modifierFlags:(NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask) target:self action:@selector(hotKeyCallcolorPickerPick) object:nil]) {
+    
+    colorPickerHotkeys = [[DDHotKeyCenter alloc] init];
+    if (![colorPickerHotkeys registerHotKeyWithKeyCode:kVK_ANSI_C modifierFlags:(NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask) target:self action:@selector(hotKeyCallcolorPickerPick) object:nil]) {
         NSLog(@"unable to register hotkey");
     } else {
         NSLog(@"registered hotkey");
     }
+    
 }
 
 //- (void)unregisterHotKey
@@ -222,27 +226,27 @@
 
     [self.tabView selectTabViewItemAtIndex:segmentedCtr.selectedSegment];
     
-    CGFloat height = 350;
-    switch (segmentedCtr.selectedSegment) {
-        case 0:
-            height = 350;
-            break;
-        case 1:
-            height = 320;
-            break;
-        case 2:
-            height = 370;
-            break;
-            
-        default:
-            break;
-    }
-    
-    NSRect newFrame = self.window.frame;
-    newFrame.size.height = height;
-    [self.window setFrame:newFrame display:YES animate:NO];
-    [self.window viewsNeedDisplay];
+//    CGFloat height = 350;
+//    switch (segmentedCtr.selectedSegment) {
+//        case 0:
+//            height = 350;
+//            break;
+//        case 1:
+//            height = 320;
+//            break;
+//        case 2:
+//            height = 370;
+//            break;
+//            
+//        default:
+//            break;
+//    }
 //    
+//    NSRect newFrame = self.window.frame;
+//    newFrame.size.height = height;
+//    [self.window setFrame:newFrame display:YES animate:NO];
+//    [self.window viewsNeedDisplay];
+//
 //
 //    NSRect newFrame = self.window.frame;
 //    NSView *selectedTabView = (NSView*) [self.tabView tabViewItemAtIndex:segmentedCtr.selectedSegment].view;
@@ -322,6 +326,16 @@
 
 - (void)startColorPickerView
 {
+    
+    if (![colorPickerHotkeys registerHotKeyWithKeyCode:kVK_Escape
+                                        modifierFlags:0
+                                               target:self
+                                               action:@selector(stopColorPickerView) object:nil]) {
+        NSLog(@"unable to register hotkey");
+    } else {
+        NSLog(@"registered hotkey");
+    }
+    
     self.colorPickerCursorView.alphaValue = .0;
     [self.colorPickerCursorView makeKeyAndOrderFront:self];
     [NSApp activateIgnoringOtherApps:YES];
@@ -340,7 +354,7 @@
 
 - (void)stopColorPickerView
 {
-    self.colorPickerCursorView.alphaValue = .0;
+    [colorPickerHotkeys unregisterHotKeysWithTarget:self action:@selector(stopColorPickerView)];
     
     [self stopGetMouseLocation];
     [self.colorPickerCursorView orderOut:self];
@@ -368,6 +382,11 @@
     
 }
 
+- (IBAction)clickedCancelColorPickerView:(id)sender {
+    
+    [self stopColorPickerView];
+    
+}
 
 #pragma mark - MouseLocation
 - (void)startGetMouseLocation
