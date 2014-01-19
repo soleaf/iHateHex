@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22E154616B234C67801CD953"
+               BlueprintIdentifier = "E1A2D628133046479D43247A"
                BuildableName = "libPods-BFColorPickerPopover.a"
                BlueprintName = "Pods-BFColorPickerPopover"
                ReferencedContainer = "container:Pods.xcodeproj">

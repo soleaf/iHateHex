@@ -292,7 +292,7 @@
 
 - (IBAction)clickedFeedBack:(id)sender {
     
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"mailto:help@mintcode.org"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/soleaf/iHateHex"]];
     
 }
 

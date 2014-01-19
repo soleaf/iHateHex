@@ -317,7 +317,7 @@
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
-        <window title="iHateHex" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="3Aj-KQ-hhF" customClass="SNRHUDWindow">
+        <window title="iHateHex" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="alertPanel" id="3Aj-KQ-hhF" customClass="SNRHUDWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1017" y="80" width="225" height="328"/>
@@ -605,9 +605,12 @@ Screen ColorPicker</string>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POj-i4-ONL">
                                             <rect key="frame" x="16" y="64" width="192" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" title="FeedBack" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Sxs-OJ-9U3" customClass="SNRHUDButtonCell">
+                                            <buttonCell key="cell" type="square" title="Contribute" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Sxs-OJ-9U3" customClass="SNRHUDButtonCell">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
+                                                <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="clickedFeedBack:" target="494" id="YFN-FQ-Yhm"/>
@@ -636,10 +639,10 @@ Screen ColorPicker</string>
                 </subviews>
             </view>
         </window>
-        <window title="iHateHexColorPickerWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="none" id="eSx-c5-K0u">
+        <window title="iHateHexColorPickerWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="none" id="eSx-c5-K0u">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="207" width="90" height="90"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="Oi1-R2-DjQ">
                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
