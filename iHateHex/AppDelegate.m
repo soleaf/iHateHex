@@ -304,6 +304,13 @@
     
 }
 
+- (IBAction)clickedColorCodeTextField:(id)sender
+{
+    NSTextField *textField = sender;
+    [textField selectText:textField.stringValue];
+    
+}
+
 
 
 #pragma mark - ColorConvert

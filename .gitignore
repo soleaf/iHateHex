@@ -1,8 +1,14 @@
+.DS_Store
+*.swp
+*~.nib
 
-*.xcuserstate
-*xcuserdata/*
-*.xcuserstate
+build/
 
-*.xcuserstate
+*.pbxuser
+*.perspective
+*.perspectivev3
 
+xcuserdata
 *.xcuserstate
+project.xcworkspace/
+xcuserdata/
