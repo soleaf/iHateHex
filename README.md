@@ -1,7 +1,7 @@
 iHateHex
 ========
 
-ColorPicker And Converting(among Hex, UIColor, NSColor) OSX App
+ColorPicker, Converting(among Hex, UIColor, NSColor) and Retina Image reducer(~@2x.png)OSX App
 
 - Screen Color Capture with loupe (auto copy to clicpboard after capturing with setted color code type on option pane)
 - Converting among color codes (Hex, UIColor, NSColor)
