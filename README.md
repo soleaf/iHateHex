@@ -9,7 +9,7 @@ ColorPicker, Converting(among Hex, UIColor, NSColor) and Retina Image reducer(~@
 
 Install
 ========
-1. Go to Release menu
+1. Go to Release menu (https://github.com/soleaf/iHateHex/releases)
 2. Download Last Release  `.dmg file`
 3. Mount and move to Application folder
 
