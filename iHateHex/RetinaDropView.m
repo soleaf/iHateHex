@@ -28,7 +28,7 @@
 
         self.wantsLayer = YES;
         self.layer.masksToBounds = YES;
-        self.layer.cornerRadius = 10.0; // Why not working??
+        self.layer.cornerRadius = 4.0; // Why not working??
         
     }
     return self;

@@ -43,7 +43,7 @@
     self.ui_retinaReduceDropView.tipLabel = self.ui_retinaReducerTip;
     self.ui_retinaReduceDropView.settingRetinaPngQuality = self.ui_settingRetinaReducerQuality;
     self.ui_retinaReduceDropView.progressbar = self.ui_retinaReducerProgressbar;
-    
+
     [self loadSettings];
  
     // ColorPicker

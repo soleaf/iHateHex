@@ -1,2096 +1,756 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>03EC994AACF44FF68375F27E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C93F1CDEC991451E8D3D8187</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>03FDDD0C04C84E0CB1787D24</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3A3F434C4F58438E9F888BFA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-SNRHUDKit-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>06980851BA5249B98EFC4A5C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EA13D3465704D388DD54F6D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>06F239299EDF45348C6DB5DE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>084F4F31127547BB9C8A31DD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2F07EEDEDF964B6AA13DBCB9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0D7A652936354F4D94095652</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E65F7AE84C2147378FF8B7B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0F8EBFA32D494A61B013FC82</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>43C56E2E587A40F29023D359</string>
-			<key>buildPhases</key>
-			<array>
-				<string>52F919C3F6A946138B32FF9F</string>
-				<string>11949A29DFD3467BA53EAD73</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5D0502EDA8D14D18B8608524</string>
-				<string>BF56CCA4C7F44CD88E8078F1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>D22D2FF589F749D39439E1E4</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>11949A29DFD3467BA53EAD73</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>72C2C7B6BC2B444F85442D64</string>
-				<string>B84FF5B7F67F40788D80E209</string>
-				<string>198FBCEE07874D1387771CD2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1286A72F5E9A448CAE9886E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BFPopoverColorWell.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/BFPopoverColorWell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>132C3829409846A1A94CC813</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SNRHUDTextFieldCell.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDTextFieldCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14AA2BF40C154DD09F8DD09B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-SNRHUDKit.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>198FBCEE07874D1387771CD2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>67F9A758BBA948C9BB1B3171</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1C2EE1996116452E85E3D696</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SNRHUDTextView.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDTextView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1EA31783836842718E535FC0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SNRHUDTextFieldCell.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDTextFieldCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>271B0FF2644B4D039099E8D7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SNRHUDButtonCell.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDButtonCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2DFA3F7240F14A6C8144AE09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4698C93A024D40FCAAEB5205</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>2F07EEDEDF964B6AA13DBCB9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SNRHUDTextView.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDTextView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3257B23455374C8689EB97C2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>893C61FFB82D4216803D60E1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>32F6C12E60124739ADDA6E85</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C379EB1DD5CD43CA9E779FF4</string>
-				<string>619C90CF6DE347609668335A</string>
-				<string>A8B5BBEBFE1D4BAA86DC5940</string>
-				<string>95DC2E402C85408FA14ADC55</string>
-				<string>DB74D2B6951B4BDA9871A505</string>
-				<string>420488EAECFB4DC9B94FD750</string>
-				<string>41B63714C56E4A879ACED3F4</string>
-				<string>9C71EECD308148248C7740C0</string>
-				<string>06980851BA5249B98EFC4A5C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>353A18AFA75E488F8A6EA8B5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A5966D9B8BFA4C21AB9856CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A1AA8E3169D4BED83366E65</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-BFColorPickerPopover-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A21967BDE404B2C90917D10</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BFIconTabBar.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Helper Classes/BFIconTabBar.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A3F434C4F58438E9F888BFA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-SNRHUDKit-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A9C6460A0DE4F4F9E76534B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BFPopoverColorWell.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/BFPopoverColorWell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C47AB0970AD42E59DF65773</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3EA13D3465704D388DD54F6D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SNRHUDWindow.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDWindow.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>40FD10437A7043A8A3000098</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>BCB7B4BE229547D795B813FF</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>E1A2D628133046479D43247A</string>
-			<key>remoteInfo</key>
-			<string>Pods-BFColorPickerPopover</string>
-		</dict>
-		<key>4160392D9F1C4A9F99D5CC29</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>41B63714C56E4A879ACED3F4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1EA31783836842718E535FC0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>420488EAECFB4DC9B94FD750</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C70BE0C8E9524C149B5AB402</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>43737374B3DF4689A4AEBCB8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>132C3829409846A1A94CC813</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>43C56E2E587A40F29023D359</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B8AE11FC77D04D38947B0AD0</string>
-				<string>03EC994AACF44FF68375F27E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4698C93A024D40FCAAEB5205</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSColorPanel+BFColorPickerPopover.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Extensions/NSColorPanel+BFColorPickerPopover.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4BACAECBB20B462D958DD019</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A198CA0EA23D43FE8505C997</string>
-				<string>4C156E74D7774BA78D10FFA0</string>
-				<string>762D10332C7B4CF6A0BF2F19</string>
-				<string>9051A42E578C4DBE8C0766D5</string>
-				<string>DAAF951EBF3347819F9DA044</string>
-				<string>0D7A652936354F4D94095652</string>
-				<string>353A18AFA75E488F8A6EA8B5</string>
-				<string>9827F958245E45699B294CC2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C156E74D7774BA78D10FFA0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E56046EBE4F443B2A9431FA3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>511E958374E64C61B35B06CF</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3C47AB0970AD42E59DF65773</string>
-				<string>9E3289F989064E819D434C1C</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>52F919C3F6A946138B32FF9F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3257B23455374C8689EB97C2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>53565479CF024380A90F59ED</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BFColorPickerPopover.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/BFColorPickerPopover.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>57AE520F6DE84ED5A3A3A786</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSBezierPath+MCAdditions.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Categories/NSBezierPath+MCAdditions.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>586CEEF9AE234838A9E8A5A2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSColorWell+BFColorPickerPopover.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Extensions/NSColorWell+BFColorPickerPopover.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58DA2D03935B4737824625D6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>92C11A8357444945A0F5AE04</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C192CC2C2154962AC4E799E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BFColorPickerPopover.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5D0502EDA8D14D18B8608524</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>E1A2D628133046479D43247A</string>
-			<key>targetProxy</key>
-			<string>40FD10437A7043A8A3000098</string>
-		</dict>
-		<key>5F822A09112945F4BDB90219</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>75617212A0B4485F9324AC95</string>
-				<string>B26AD1F7A2EF4C418B3B45A0</string>
-				<string>8EC8FF5ACEA84DA9B7308BE5</string>
-				<string>D8DBDB85C9E64AA7A90601C4</string>
-				<string>FCE46A7D31F644519BE49666</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>61042A40C57449F292E75FBD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BFColorPickerPopover.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>619C90CF6DE347609668335A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ADBC252DA04B49D8AFD9DDAF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>61AEE14DAC5D4D5E91786F75</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>EBAD1142D01E4A97872B93C9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>32F6C12E60124739ADDA6E85</string>
-				<string>8C8BE5F517294C9C84FD4319</string>
-				<string>E7DD1CC193C54A759CCFC18D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-SNRHUDKit</string>
-			<key>productName</key>
-			<string>Pods-SNRHUDKit</string>
-			<key>productReference</key>
-			<string>67F9A758BBA948C9BB1B3171</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>632CB3B7AAD5434CA8517116</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>677A4900E50C4EFEA3DBC7D3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SNRHUDScrollView.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDScrollView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>678B0D53D21F465CB5E175F4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6D34118DE50240C19E510F9D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>67F9A758BBA948C9BB1B3171</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-SNRHUDKit.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>682A1369A0604C8F9DB73BB7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSColor+BFColorPickerPopover.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Extensions/NSColor+BFColorPickerPopover.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6D34118DE50240C19E510F9D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BFColorPickerPopoverView.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Helper Classes/BFColorPickerPopoverView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>716EC218BE794B83902157F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1286A72F5E9A448CAE9886E3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>72C2C7B6BC2B444F85442D64</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F2EA649909548239138BE9C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>735059A6C4804B0A9921DC1D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-BFColorPickerPopover-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73F148246A0B42009E3AD6DF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BFColorPickerViewController.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Helper Classes/BFColorPickerViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>741A2497EBD2461794C939C5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>735059A6C4804B0A9921DC1D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-BFColorPickerPopover-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>74BA31CE191943198098AB6B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>682A1369A0604C8F9DB73BB7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>75617212A0B4485F9324AC95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>762D10332C7B4CF6A0BF2F19</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C85DEDF64E8E43ECB1D45154</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>78F0170CFBF54E048BC4FAEC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-SNRHUDKit-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7F2FC6E54F144E38B7EA26E6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>809A6EDD99E247DBA219C181</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7FAD6C546C9D4103B36BFBFB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CB06A918474949788D07E3C5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>809A6EDD99E247DBA219C181</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSBezierPath+MCAdditions.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Categories/NSBezierPath+MCAdditions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>893C61FFB82D4216803D60E1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>89F76C917E9C4253B7D0AD8E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C93F1CDEC991451E8D3D8187</string>
-				<string>F23F22FCCE1547C5810AF674</string>
-				<string>4160392D9F1C4A9F99D5CC29</string>
-				<string>893C61FFB82D4216803D60E1</string>
-				<string>06F239299EDF45348C6DB5DE</string>
-				<string>632CB3B7AAD5434CA8517116</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8AA42034A938414B9D20B917</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-BFColorPickerPopover-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C8BE5F517294C9C84FD4319</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BDA6405DD3304E298E167A45</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8DE79DF8454A4212B2E6F396</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SNRHUDScrollView.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDScrollView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8EC8FF5ACEA84DA9B7308BE5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D5ABECCE05484C1FA5AB0A32</string>
-				<string>CBED0B70847C4E38A016A2B8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8F2EA649909548239138BE9C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Cocoa.framework</string>
-			<key>path</key>
-			<string>Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>9051A42E578C4DBE8C0766D5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A21967BDE404B2C90917D10</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>92C11A8357444945A0F5AE04</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F2EA649909548239138BE9C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>95DC2E402C85408FA14ADC55</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAA337FD9E0543288E6DBB90</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>9698A8EF969347A28749CA3B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BFColorPickerPopover.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/BFColorPickerPopover.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9827F958245E45699B294CC2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>586CEEF9AE234838A9E8A5A2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9C71EECD308148248C7740C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1C2EE1996116452E85E3D696</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>9E3289F989064E819D434C1C</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>9EC97E6FBBFC4F7990FFC23B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>DB985E47C37E4C4E824478CB</string>
-				<string>741A2497EBD2461794C939C5</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A0EE3A60A013428DA827704F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EB83AEFE452543C495144ACA</string>
-				<string>678B0D53D21F465CB5E175F4</string>
-				<string>C215F58E3E10424A8654E348</string>
-				<string>D39D0726634243FDB826379C</string>
-				<string>716EC218BE794B83902157F3</string>
-				<string>74BA31CE191943198098AB6B</string>
-				<string>2DFA3F7240F14A6C8144AE09</string>
-				<string>B6B585462FB546949AE70A30</string>
-				<string>E394BE9786C942B6A1ADC345</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A198CA0EA23D43FE8505C997</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9698A8EF969347A28749CA3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A5966D9B8BFA4C21AB9856CC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSColorPanel+BFColorPickerPopover.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Extensions/NSColorPanel+BFColorPickerPopover.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A8B5BBEBFE1D4BAA86DC5940</key>
-		<dict>
-			<key>fileRef</key>
-			<string>271B0FF2644B4D039099E8D7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>ADBC252DA04B49D8AFD9DDAF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-SNRHUDKit-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B26AD1F7A2EF4C418B3B45A0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFE2992C189A42D58CBCE1CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B475BAE124154689A0C3D6C7</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>BCB7B4BE229547D795B813FF</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>61AEE14DAC5D4D5E91786F75</string>
-			<key>remoteInfo</key>
-			<string>Pods-SNRHUDKit</string>
-		</dict>
-		<key>B6B585462FB546949AE70A30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C6F6AAD98DBB44C08DFF6C34</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>B84FF5B7F67F40788D80E209</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C192CC2C2154962AC4E799E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B8AE11FC77D04D38947B0AD0</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C93F1CDEC991451E8D3D8187</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>BCB7B4BE229547D795B813FF</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>511E958374E64C61B35B06CF</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>5F822A09112945F4BDB90219</string>
-			<key>productRefGroup</key>
-			<string>D8DBDB85C9E64AA7A90601C4</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>0F8EBFA32D494A61B013FC82</string>
-				<string>E1A2D628133046479D43247A</string>
-				<string>61AEE14DAC5D4D5E91786F75</string>
-			</array>
-		</dict>
-		<key>BDA6405DD3304E298E167A45</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F2EA649909548239138BE9C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BEFB6AC00BE94135BF51AE53</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3A3F434C4F58438E9F888BFA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-SNRHUDKit-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>BF56CCA4C7F44CD88E8078F1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>61AEE14DAC5D4D5E91786F75</string>
-			<key>targetProxy</key>
-			<string>B475BAE124154689A0C3D6C7</string>
-		</dict>
-		<key>C215F58E3E10424A8654E348</key>
-		<dict>
-			<key>fileRef</key>
-			<string>73F148246A0B42009E3AD6DF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>C2FEFF422BC94204B34BD237</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SNRHUDWindow.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDWindow.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C379EB1DD5CD43CA9E779FF4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>57AE520F6DE84ED5A3A3A786</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>C6F6AAD98DBB44C08DFF6C34</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSColorWell+BFColorPickerPopover.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Extensions/NSColorWell+BFColorPickerPopover.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C70BE0C8E9524C149B5AB402</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SNRHUDSegmentedCell.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDSegmentedCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C85DEDF64E8E43ECB1D45154</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BFColorPickerViewController.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Helper Classes/BFColorPickerViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C93F1CDEC991451E8D3D8187</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CB06A918474949788D07E3C5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SNRHUDButtonCell.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDButtonCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CBED0B70847C4E38A016A2B8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>809A6EDD99E247DBA219C181</string>
-				<string>57AE520F6DE84ED5A3A3A786</string>
-				<string>CB06A918474949788D07E3C5</string>
-				<string>271B0FF2644B4D039099E8D7</string>
-				<string>E5C6E0668A9D4008A5BA86F0</string>
-				<string>EAA337FD9E0543288E6DBB90</string>
-				<string>677A4900E50C4EFEA3DBC7D3</string>
-				<string>8DE79DF8454A4212B2E6F396</string>
-				<string>E8F14B8E12114EBE87CFF946</string>
-				<string>C70BE0C8E9524C149B5AB402</string>
-				<string>132C3829409846A1A94CC813</string>
-				<string>1EA31783836842718E535FC0</string>
-				<string>2F07EEDEDF964B6AA13DBCB9</string>
-				<string>1C2EE1996116452E85E3D696</string>
-				<string>C2FEFF422BC94204B34BD237</string>
-				<string>3EA13D3465704D388DD54F6D</string>
-				<string>FDAAFE7C35334DFB982C8210</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SNRHUDKit</string>
-			<key>path</key>
-			<string>SNRHUDKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CF1DB78863644D919F3A87A0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E8F14B8E12114EBE87CFF946</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFE2992C189A42D58CBCE1CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8F2EA649909548239138BE9C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>OS X</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D22D2FF589F749D39439E1E4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D39D0726634243FDB826379C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D42177C4D03A4664846A885D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>D42177C4D03A4664846A885D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BFIconTabBar.m</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Helper Classes/BFIconTabBar.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D5ABECCE05484C1FA5AB0A32</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9698A8EF969347A28749CA3B</string>
-				<string>53565479CF024380A90F59ED</string>
-				<string>E56046EBE4F443B2A9431FA3</string>
-				<string>6D34118DE50240C19E510F9D</string>
-				<string>C85DEDF64E8E43ECB1D45154</string>
-				<string>73F148246A0B42009E3AD6DF</string>
-				<string>3A21967BDE404B2C90917D10</string>
-				<string>D42177C4D03A4664846A885D</string>
-				<string>3A9C6460A0DE4F4F9E76534B</string>
-				<string>1286A72F5E9A448CAE9886E3</string>
-				<string>E65F7AE84C2147378FF8B7B4</string>
-				<string>682A1369A0604C8F9DB73BB7</string>
-				<string>A5966D9B8BFA4C21AB9856CC</string>
-				<string>4698C93A024D40FCAAEB5205</string>
-				<string>586CEEF9AE234838A9E8A5A2</string>
-				<string>C6F6AAD98DBB44C08DFF6C34</string>
-				<string>D9508124F1F947FEA78AA8A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>BFColorPickerPopover</string>
-			<key>path</key>
-			<string>BFColorPickerPopover</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8DBDB85C9E64AA7A90601C4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D22D2FF589F749D39439E1E4</string>
-				<string>5C192CC2C2154962AC4E799E</string>
-				<string>67F9A758BBA948C9BB1B3171</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D9508124F1F947FEA78AA8A8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>61042A40C57449F292E75FBD</string>
-				<string>735059A6C4804B0A9921DC1D</string>
-				<string>8AA42034A938414B9D20B917</string>
-				<string>3A1AA8E3169D4BED83366E65</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>DAAF951EBF3347819F9DA044</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A9C6460A0DE4F4F9E76534B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DB74D2B6951B4BDA9871A505</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DE79DF8454A4212B2E6F396</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>DB985E47C37E4C4E824478CB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>735059A6C4804B0A9921DC1D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-BFColorPickerPopover-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E18DC19F0D634CC78FFAD26E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E5C6E0668A9D4008A5BA86F0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E1A2D628133046479D43247A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>9EC97E6FBBFC4F7990FFC23B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>A0EE3A60A013428DA827704F</string>
-				<string>58DA2D03935B4737824625D6</string>
-				<string>4BACAECBB20B462D958DD019</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-BFColorPickerPopover</string>
-			<key>productName</key>
-			<string>Pods-BFColorPickerPopover</string>
-			<key>productReference</key>
-			<string>5C192CC2C2154962AC4E799E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>E394BE9786C942B6A1ADC345</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8AA42034A938414B9D20B917</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E56046EBE4F443B2A9431FA3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BFColorPickerPopoverView.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Helper Classes/BFColorPickerPopoverView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5C6E0668A9D4008A5BA86F0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SNRHUDImageCell.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDImageCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E65F7AE84C2147378FF8B7B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSColor+BFColorPickerPopover.h</string>
-			<key>path</key>
-			<string>BFColorPickerPopover/Extensions/NSColor+BFColorPickerPopover.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7DD1CC193C54A759CCFC18D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7F2FC6E54F144E38B7EA26E6</string>
-				<string>7FAD6C546C9D4103B36BFBFB</string>
-				<string>E18DC19F0D634CC78FFAD26E</string>
-				<string>ED57C27811444BE99925BD02</string>
-				<string>CF1DB78863644D919F3A87A0</string>
-				<string>43737374B3DF4689A4AEBCB8</string>
-				<string>084F4F31127547BB9C8A31DD</string>
-				<string>EE2F1C4DBE0B403C99D4D139</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E8F14B8E12114EBE87CFF946</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SNRHUDSegmentedCell.h</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDSegmentedCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAA337FD9E0543288E6DBB90</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SNRHUDImageCell.m</string>
-			<key>path</key>
-			<string>SNRHUDKit/Classes/SNRHUDImageCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EB83AEFE452543C495144ACA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>53565479CF024380A90F59ED</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>EBAD1142D01E4A97872B93C9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>03FDDD0C04C84E0CB1787D24</string>
-				<string>BEFB6AC00BE94135BF51AE53</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>ED57C27811444BE99925BD02</key>
-		<dict>
-			<key>fileRef</key>
-			<string>677A4900E50C4EFEA3DBC7D3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EE2F1C4DBE0B403C99D4D139</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C2FEFF422BC94204B34BD237</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F23F22FCCE1547C5810AF674</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FCE46A7D31F644519BE49666</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>89F76C917E9C4253B7D0AD8E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FDAAFE7C35334DFB982C8210</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>14AA2BF40C154DD09F8DD09B</string>
-				<string>3A3F434C4F58438E9F888BFA</string>
-				<string>ADBC252DA04B49D8AFD9DDAF</string>
-				<string>78F0170CFBF54E048BC4FAEC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>BCB7B4BE229547D795B813FF</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06980851BA5249B98EFC4A5C /* SNRHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA13D3465704D388DD54F6D /* SNRHUDWindow.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		084F4F31127547BB9C8A31DD /* SNRHUDTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F07EEDEDF964B6AA13DBCB9 /* SNRHUDTextView.h */; };
+		0D7A652936354F4D94095652 /* NSColor+BFColorPickerPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = E65F7AE84C2147378FF8B7B4 /* NSColor+BFColorPickerPopover.h */; };
+		198FBCEE07874D1387771CD2 /* libPods-SNRHUDKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67F9A758BBA948C9BB1B3171 /* libPods-SNRHUDKit.a */; };
+		2DFA3F7240F14A6C8144AE09 /* NSColorPanel+BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 4698C93A024D40FCAAEB5205 /* NSColorPanel+BFColorPickerPopover.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		3257B23455374C8689EB97C2 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 893C61FFB82D4216803D60E1 /* Pods-dummy.m */; };
+		353A18AFA75E488F8A6EA8B5 /* NSColorPanel+BFColorPickerPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = A5966D9B8BFA4C21AB9856CC /* NSColorPanel+BFColorPickerPopover.h */; };
+		41B63714C56E4A879ACED3F4 /* SNRHUDTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA31783836842718E535FC0 /* SNRHUDTextFieldCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		420488EAECFB4DC9B94FD750 /* SNRHUDSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C70BE0C8E9524C149B5AB402 /* SNRHUDSegmentedCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		43737374B3DF4689A4AEBCB8 /* SNRHUDTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 132C3829409846A1A94CC813 /* SNRHUDTextFieldCell.h */; };
+		4C156E74D7774BA78D10FFA0 /* BFColorPickerPopoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = E56046EBE4F443B2A9431FA3 /* BFColorPickerPopoverView.h */; };
+		619C90CF6DE347609668335A /* Pods-SNRHUDKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBC252DA04B49D8AFD9DDAF /* Pods-SNRHUDKit-dummy.m */; };
+		678B0D53D21F465CB5E175F4 /* BFColorPickerPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D34118DE50240C19E510F9D /* BFColorPickerPopoverView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		716EC218BE794B83902157F3 /* BFPopoverColorWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1286A72F5E9A448CAE9886E3 /* BFPopoverColorWell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		72C2C7B6BC2B444F85442D64 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2EA649909548239138BE9C /* Cocoa.framework */; };
+		74BA31CE191943198098AB6B /* NSColor+BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 682A1369A0604C8F9DB73BB7 /* NSColor+BFColorPickerPopover.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		762D10332C7B4CF6A0BF2F19 /* BFColorPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C85DEDF64E8E43ECB1D45154 /* BFColorPickerViewController.h */; };
+		7F2FC6E54F144E38B7EA26E6 /* NSBezierPath+MCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 809A6EDD99E247DBA219C181 /* NSBezierPath+MCAdditions.h */; };
+		7FAD6C546C9D4103B36BFBFB /* SNRHUDButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CB06A918474949788D07E3C5 /* SNRHUDButtonCell.h */; };
+		9051A42E578C4DBE8C0766D5 /* BFIconTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A21967BDE404B2C90917D10 /* BFIconTabBar.h */; };
+		92C11A8357444945A0F5AE04 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2EA649909548239138BE9C /* Cocoa.framework */; };
+		95DC2E402C85408FA14ADC55 /* SNRHUDImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA337FD9E0543288E6DBB90 /* SNRHUDImageCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		9827F958245E45699B294CC2 /* NSColorWell+BFColorPickerPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 586CEEF9AE234838A9E8A5A2 /* NSColorWell+BFColorPickerPopover.h */; };
+		9C71EECD308148248C7740C0 /* SNRHUDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2EE1996116452E85E3D696 /* SNRHUDTextView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		A198CA0EA23D43FE8505C997 /* BFColorPickerPopover.h in Headers */ = {isa = PBXBuildFile; fileRef = 9698A8EF969347A28749CA3B /* BFColorPickerPopover.h */; };
+		A8B5BBEBFE1D4BAA86DC5940 /* SNRHUDButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271B0FF2644B4D039099E8D7 /* SNRHUDButtonCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		B6B585462FB546949AE70A30 /* NSColorWell+BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F6AAD98DBB44C08DFF6C34 /* NSColorWell+BFColorPickerPopover.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		B84FF5B7F67F40788D80E209 /* libPods-BFColorPickerPopover.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C192CC2C2154962AC4E799E /* libPods-BFColorPickerPopover.a */; };
+		BDA6405DD3304E298E167A45 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2EA649909548239138BE9C /* Cocoa.framework */; };
+		C215F58E3E10424A8654E348 /* BFColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F148246A0B42009E3AD6DF /* BFColorPickerViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		C379EB1DD5CD43CA9E779FF4 /* NSBezierPath+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AE520F6DE84ED5A3A3A786 /* NSBezierPath+MCAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		CF1DB78863644D919F3A87A0 /* SNRHUDSegmentedCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F14B8E12114EBE87CFF946 /* SNRHUDSegmentedCell.h */; };
+		D39D0726634243FDB826379C /* BFIconTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D42177C4D03A4664846A885D /* BFIconTabBar.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		DAAF951EBF3347819F9DA044 /* BFPopoverColorWell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A9C6460A0DE4F4F9E76534B /* BFPopoverColorWell.h */; };
+		DB74D2B6951B4BDA9871A505 /* SNRHUDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE79DF8454A4212B2E6F396 /* SNRHUDScrollView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		E18DC19F0D634CC78FFAD26E /* SNRHUDImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E5C6E0668A9D4008A5BA86F0 /* SNRHUDImageCell.h */; };
+		E394BE9786C942B6A1ADC345 /* Pods-BFColorPickerPopover-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA42034A938414B9D20B917 /* Pods-BFColorPickerPopover-dummy.m */; };
+		EB83AEFE452543C495144ACA /* BFColorPickerPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 53565479CF024380A90F59ED /* BFColorPickerPopover.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		ED57C27811444BE99925BD02 /* SNRHUDScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 677A4900E50C4EFEA3DBC7D3 /* SNRHUDScrollView.h */; };
+		EE2F1C4DBE0B403C99D4D139 /* SNRHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = C2FEFF422BC94204B34BD237 /* SNRHUDWindow.h */; };
+		F70BF343188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F70BF341188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.h */; };
+		F70BF344188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70BF342188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40FD10437A7043A8A3000098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCB7B4BE229547D795B813FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1A2D628133046479D43247A;
+			remoteInfo = "Pods-BFColorPickerPopover";
+		};
+		B475BAE124154689A0C3D6C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCB7B4BE229547D795B813FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61AEE14DAC5D4D5E91786F75;
+			remoteInfo = "Pods-SNRHUDKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06F239299EDF45348C6DB5DE /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		1286A72F5E9A448CAE9886E3 /* BFPopoverColorWell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFPopoverColorWell.m; path = BFColorPickerPopover/BFPopoverColorWell.m; sourceTree = "<group>"; };
+		132C3829409846A1A94CC813 /* SNRHUDTextFieldCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNRHUDTextFieldCell.h; path = SNRHUDKit/Classes/SNRHUDTextFieldCell.h; sourceTree = "<group>"; };
+		14AA2BF40C154DD09F8DD09B /* Pods-SNRHUDKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNRHUDKit.xcconfig"; sourceTree = "<group>"; };
+		1C2EE1996116452E85E3D696 /* SNRHUDTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNRHUDTextView.m; path = SNRHUDKit/Classes/SNRHUDTextView.m; sourceTree = "<group>"; };
+		1EA31783836842718E535FC0 /* SNRHUDTextFieldCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNRHUDTextFieldCell.m; path = SNRHUDKit/Classes/SNRHUDTextFieldCell.m; sourceTree = "<group>"; };
+		271B0FF2644B4D039099E8D7 /* SNRHUDButtonCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNRHUDButtonCell.m; path = SNRHUDKit/Classes/SNRHUDButtonCell.m; sourceTree = "<group>"; };
+		2F07EEDEDF964B6AA13DBCB9 /* SNRHUDTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNRHUDTextView.h; path = SNRHUDKit/Classes/SNRHUDTextView.h; sourceTree = "<group>"; };
+		3A1AA8E3169D4BED83366E65 /* Pods-BFColorPickerPopover-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BFColorPickerPopover-prefix.pch"; sourceTree = "<group>"; };
+		3A21967BDE404B2C90917D10 /* BFIconTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFIconTabBar.h; path = "BFColorPickerPopover/Helper Classes/BFIconTabBar.h"; sourceTree = "<group>"; };
+		3A3F434C4F58438E9F888BFA /* Pods-SNRHUDKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SNRHUDKit-Private.xcconfig"; sourceTree = "<group>"; };
+		3A9C6460A0DE4F4F9E76534B /* BFPopoverColorWell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFPopoverColorWell.h; path = BFColorPickerPopover/BFPopoverColorWell.h; sourceTree = "<group>"; };
+		3EA13D3465704D388DD54F6D /* SNRHUDWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNRHUDWindow.m; path = SNRHUDKit/Classes/SNRHUDWindow.m; sourceTree = "<group>"; };
+		4160392D9F1C4A9F99D5CC29 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		4698C93A024D40FCAAEB5205 /* NSColorPanel+BFColorPickerPopover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSColorPanel+BFColorPickerPopover.m"; path = "BFColorPickerPopover/Extensions/NSColorPanel+BFColorPickerPopover.m"; sourceTree = "<group>"; };
+		53565479CF024380A90F59ED /* BFColorPickerPopover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFColorPickerPopover.m; path = BFColorPickerPopover/BFColorPickerPopover.m; sourceTree = "<group>"; };
+		57AE520F6DE84ED5A3A3A786 /* NSBezierPath+MCAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+MCAdditions.m"; path = "SNRHUDKit/Categories/NSBezierPath+MCAdditions.m"; sourceTree = "<group>"; };
+		586CEEF9AE234838A9E8A5A2 /* NSColorWell+BFColorPickerPopover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSColorWell+BFColorPickerPopover.h"; path = "BFColorPickerPopover/Extensions/NSColorWell+BFColorPickerPopover.h"; sourceTree = "<group>"; };
+		5C192CC2C2154962AC4E799E /* libPods-BFColorPickerPopover.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BFColorPickerPopover.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61042A40C57449F292E75FBD /* Pods-BFColorPickerPopover.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFColorPickerPopover.xcconfig"; sourceTree = "<group>"; };
+		632CB3B7AAD5434CA8517116 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		677A4900E50C4EFEA3DBC7D3 /* SNRHUDScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNRHUDScrollView.h; path = SNRHUDKit/Classes/SNRHUDScrollView.h; sourceTree = "<group>"; };
+		67F9A758BBA948C9BB1B3171 /* libPods-SNRHUDKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNRHUDKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		682A1369A0604C8F9DB73BB7 /* NSColor+BFColorPickerPopover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSColor+BFColorPickerPopover.m"; path = "BFColorPickerPopover/Extensions/NSColor+BFColorPickerPopover.m"; sourceTree = "<group>"; };
+		6D34118DE50240C19E510F9D /* BFColorPickerPopoverView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFColorPickerPopoverView.m; path = "BFColorPickerPopover/Helper Classes/BFColorPickerPopoverView.m"; sourceTree = "<group>"; };
+		735059A6C4804B0A9921DC1D /* Pods-BFColorPickerPopover-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFColorPickerPopover-Private.xcconfig"; sourceTree = "<group>"; };
+		73F148246A0B42009E3AD6DF /* BFColorPickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFColorPickerViewController.m; path = "BFColorPickerPopover/Helper Classes/BFColorPickerViewController.m"; sourceTree = "<group>"; };
+		75617212A0B4485F9324AC95 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		78F0170CFBF54E048BC4FAEC /* Pods-SNRHUDKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SNRHUDKit-prefix.pch"; sourceTree = "<group>"; };
+		809A6EDD99E247DBA219C181 /* NSBezierPath+MCAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+MCAdditions.h"; path = "SNRHUDKit/Categories/NSBezierPath+MCAdditions.h"; sourceTree = "<group>"; };
+		893C61FFB82D4216803D60E1 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		8AA42034A938414B9D20B917 /* Pods-BFColorPickerPopover-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BFColorPickerPopover-dummy.m"; sourceTree = "<group>"; };
+		8DE79DF8454A4212B2E6F396 /* SNRHUDScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNRHUDScrollView.m; path = SNRHUDKit/Classes/SNRHUDScrollView.m; sourceTree = "<group>"; };
+		8F2EA649909548239138BE9C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		9698A8EF969347A28749CA3B /* BFColorPickerPopover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFColorPickerPopover.h; path = BFColorPickerPopover/BFColorPickerPopover.h; sourceTree = "<group>"; };
+		A5966D9B8BFA4C21AB9856CC /* NSColorPanel+BFColorPickerPopover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSColorPanel+BFColorPickerPopover.h"; path = "BFColorPickerPopover/Extensions/NSColorPanel+BFColorPickerPopover.h"; sourceTree = "<group>"; };
+		ADBC252DA04B49D8AFD9DDAF /* Pods-SNRHUDKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SNRHUDKit-dummy.m"; sourceTree = "<group>"; };
+		C2FEFF422BC94204B34BD237 /* SNRHUDWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNRHUDWindow.h; path = SNRHUDKit/Classes/SNRHUDWindow.h; sourceTree = "<group>"; };
+		C6F6AAD98DBB44C08DFF6C34 /* NSColorWell+BFColorPickerPopover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSColorWell+BFColorPickerPopover.m"; path = "BFColorPickerPopover/Extensions/NSColorWell+BFColorPickerPopover.m"; sourceTree = "<group>"; };
+		C70BE0C8E9524C149B5AB402 /* SNRHUDSegmentedCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNRHUDSegmentedCell.m; path = SNRHUDKit/Classes/SNRHUDSegmentedCell.m; sourceTree = "<group>"; };
+		C85DEDF64E8E43ECB1D45154 /* BFColorPickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFColorPickerViewController.h; path = "BFColorPickerPopover/Helper Classes/BFColorPickerViewController.h"; sourceTree = "<group>"; };
+		C93F1CDEC991451E8D3D8187 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		CB06A918474949788D07E3C5 /* SNRHUDButtonCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNRHUDButtonCell.h; path = SNRHUDKit/Classes/SNRHUDButtonCell.h; sourceTree = "<group>"; };
+		D22D2FF589F749D39439E1E4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42177C4D03A4664846A885D /* BFIconTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFIconTabBar.m; path = "BFColorPickerPopover/Helper Classes/BFIconTabBar.m"; sourceTree = "<group>"; };
+		E56046EBE4F443B2A9431FA3 /* BFColorPickerPopoverView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFColorPickerPopoverView.h; path = "BFColorPickerPopover/Helper Classes/BFColorPickerPopoverView.h"; sourceTree = "<group>"; };
+		E5C6E0668A9D4008A5BA86F0 /* SNRHUDImageCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNRHUDImageCell.h; path = SNRHUDKit/Classes/SNRHUDImageCell.h; sourceTree = "<group>"; };
+		E65F7AE84C2147378FF8B7B4 /* NSColor+BFColorPickerPopover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSColor+BFColorPickerPopover.h"; path = "BFColorPickerPopover/Extensions/NSColor+BFColorPickerPopover.h"; sourceTree = "<group>"; };
+		E8F14B8E12114EBE87CFF946 /* SNRHUDSegmentedCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SNRHUDSegmentedCell.h; path = SNRHUDKit/Classes/SNRHUDSegmentedCell.h; sourceTree = "<group>"; };
+		EAA337FD9E0543288E6DBB90 /* SNRHUDImageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SNRHUDImageCell.m; path = SNRHUDKit/Classes/SNRHUDImageCell.m; sourceTree = "<group>"; };
+		F23F22FCCE1547C5810AF674 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F70BF341188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNRHUDPopUpButtonCell.h; sourceTree = "<group>"; };
+		F70BF342188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNRHUDPopUpButtonCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11949A29DFD3467BA53EAD73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C2C7B6BC2B444F85442D64 /* Cocoa.framework in Frameworks */,
+				B84FF5B7F67F40788D80E209 /* libPods-BFColorPickerPopover.a in Frameworks */,
+				198FBCEE07874D1387771CD2 /* libPods-SNRHUDKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DA2D03935B4737824625D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C11A8357444945A0F5AE04 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C8BE5F517294C9C84FD4319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDA6405DD3304E298E167A45 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F822A09112945F4BDB90219 = {
+			isa = PBXGroup;
+			children = (
+				75617212A0B4485F9324AC95 /* Podfile */,
+				B26AD1F7A2EF4C418B3B45A0 /* Frameworks */,
+				8EC8FF5ACEA84DA9B7308BE5 /* Pods */,
+				D8DBDB85C9E64AA7A90601C4 /* Products */,
+				FCE46A7D31F644519BE49666 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89F76C917E9C4253B7D0AD8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C93F1CDEC991451E8D3D8187 /* Pods.xcconfig */,
+				F23F22FCCE1547C5810AF674 /* Pods-acknowledgements.markdown */,
+				4160392D9F1C4A9F99D5CC29 /* Pods-acknowledgements.plist */,
+				893C61FFB82D4216803D60E1 /* Pods-dummy.m */,
+				06F239299EDF45348C6DB5DE /* Pods-environment.h */,
+				632CB3B7AAD5434CA8517116 /* Pods-resources.sh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8EC8FF5ACEA84DA9B7308BE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5ABECCE05484C1FA5AB0A32 /* BFColorPickerPopover */,
+				CBED0B70847C4E38A016A2B8 /* SNRHUDKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B26AD1F7A2EF4C418B3B45A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFE2992C189A42D58CBCE1CA /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBED0B70847C4E38A016A2B8 /* SNRHUDKit */ = {
+			isa = PBXGroup;
+			children = (
+				809A6EDD99E247DBA219C181 /* NSBezierPath+MCAdditions.h */,
+				57AE520F6DE84ED5A3A3A786 /* NSBezierPath+MCAdditions.m */,
+				CB06A918474949788D07E3C5 /* SNRHUDButtonCell.h */,
+				271B0FF2644B4D039099E8D7 /* SNRHUDButtonCell.m */,
+				E5C6E0668A9D4008A5BA86F0 /* SNRHUDImageCell.h */,
+				EAA337FD9E0543288E6DBB90 /* SNRHUDImageCell.m */,
+				F70BF341188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.h */,
+				F70BF342188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.m */,
+				677A4900E50C4EFEA3DBC7D3 /* SNRHUDScrollView.h */,
+				8DE79DF8454A4212B2E6F396 /* SNRHUDScrollView.m */,
+				E8F14B8E12114EBE87CFF946 /* SNRHUDSegmentedCell.h */,
+				C70BE0C8E9524C149B5AB402 /* SNRHUDSegmentedCell.m */,
+				132C3829409846A1A94CC813 /* SNRHUDTextFieldCell.h */,
+				1EA31783836842718E535FC0 /* SNRHUDTextFieldCell.m */,
+				2F07EEDEDF964B6AA13DBCB9 /* SNRHUDTextView.h */,
+				1C2EE1996116452E85E3D696 /* SNRHUDTextView.m */,
+				C2FEFF422BC94204B34BD237 /* SNRHUDWindow.h */,
+				3EA13D3465704D388DD54F6D /* SNRHUDWindow.m */,
+				FDAAFE7C35334DFB982C8210 /* Support Files */,
+			);
+			path = SNRHUDKit;
+			sourceTree = "<group>";
+		};
+		CFE2992C189A42D58CBCE1CA /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				8F2EA649909548239138BE9C /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		D5ABECCE05484C1FA5AB0A32 /* BFColorPickerPopover */ = {
+			isa = PBXGroup;
+			children = (
+				9698A8EF969347A28749CA3B /* BFColorPickerPopover.h */,
+				53565479CF024380A90F59ED /* BFColorPickerPopover.m */,
+				E56046EBE4F443B2A9431FA3 /* BFColorPickerPopoverView.h */,
+				6D34118DE50240C19E510F9D /* BFColorPickerPopoverView.m */,
+				C85DEDF64E8E43ECB1D45154 /* BFColorPickerViewController.h */,
+				73F148246A0B42009E3AD6DF /* BFColorPickerViewController.m */,
+				3A21967BDE404B2C90917D10 /* BFIconTabBar.h */,
+				D42177C4D03A4664846A885D /* BFIconTabBar.m */,
+				3A9C6460A0DE4F4F9E76534B /* BFPopoverColorWell.h */,
+				1286A72F5E9A448CAE9886E3 /* BFPopoverColorWell.m */,
+				E65F7AE84C2147378FF8B7B4 /* NSColor+BFColorPickerPopover.h */,
+				682A1369A0604C8F9DB73BB7 /* NSColor+BFColorPickerPopover.m */,
+				A5966D9B8BFA4C21AB9856CC /* NSColorPanel+BFColorPickerPopover.h */,
+				4698C93A024D40FCAAEB5205 /* NSColorPanel+BFColorPickerPopover.m */,
+				586CEEF9AE234838A9E8A5A2 /* NSColorWell+BFColorPickerPopover.h */,
+				C6F6AAD98DBB44C08DFF6C34 /* NSColorWell+BFColorPickerPopover.m */,
+				D9508124F1F947FEA78AA8A8 /* Support Files */,
+			);
+			path = BFColorPickerPopover;
+			sourceTree = "<group>";
+		};
+		D8DBDB85C9E64AA7A90601C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D22D2FF589F749D39439E1E4 /* libPods.a */,
+				5C192CC2C2154962AC4E799E /* libPods-BFColorPickerPopover.a */,
+				67F9A758BBA948C9BB1B3171 /* libPods-SNRHUDKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9508124F1F947FEA78AA8A8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				61042A40C57449F292E75FBD /* Pods-BFColorPickerPopover.xcconfig */,
+				735059A6C4804B0A9921DC1D /* Pods-BFColorPickerPopover-Private.xcconfig */,
+				8AA42034A938414B9D20B917 /* Pods-BFColorPickerPopover-dummy.m */,
+				3A1AA8E3169D4BED83366E65 /* Pods-BFColorPickerPopover-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		FCE46A7D31F644519BE49666 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				89F76C917E9C4253B7D0AD8E /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FDAAFE7C35334DFB982C8210 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				14AA2BF40C154DD09F8DD09B /* Pods-SNRHUDKit.xcconfig */,
+				3A3F434C4F58438E9F888BFA /* Pods-SNRHUDKit-Private.xcconfig */,
+				ADBC252DA04B49D8AFD9DDAF /* Pods-SNRHUDKit-dummy.m */,
+				78F0170CFBF54E048BC4FAEC /* Pods-SNRHUDKit-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4BACAECBB20B462D958DD019 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A198CA0EA23D43FE8505C997 /* BFColorPickerPopover.h in Headers */,
+				4C156E74D7774BA78D10FFA0 /* BFColorPickerPopoverView.h in Headers */,
+				762D10332C7B4CF6A0BF2F19 /* BFColorPickerViewController.h in Headers */,
+				9051A42E578C4DBE8C0766D5 /* BFIconTabBar.h in Headers */,
+				DAAF951EBF3347819F9DA044 /* BFPopoverColorWell.h in Headers */,
+				0D7A652936354F4D94095652 /* NSColor+BFColorPickerPopover.h in Headers */,
+				353A18AFA75E488F8A6EA8B5 /* NSColorPanel+BFColorPickerPopover.h in Headers */,
+				9827F958245E45699B294CC2 /* NSColorWell+BFColorPickerPopover.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DD1CC193C54A759CCFC18D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F2FC6E54F144E38B7EA26E6 /* NSBezierPath+MCAdditions.h in Headers */,
+				7FAD6C546C9D4103B36BFBFB /* SNRHUDButtonCell.h in Headers */,
+				E18DC19F0D634CC78FFAD26E /* SNRHUDImageCell.h in Headers */,
+				ED57C27811444BE99925BD02 /* SNRHUDScrollView.h in Headers */,
+				CF1DB78863644D919F3A87A0 /* SNRHUDSegmentedCell.h in Headers */,
+				43737374B3DF4689A4AEBCB8 /* SNRHUDTextFieldCell.h in Headers */,
+				084F4F31127547BB9C8A31DD /* SNRHUDTextView.h in Headers */,
+				F70BF343188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.h in Headers */,
+				EE2F1C4DBE0B403C99D4D139 /* SNRHUDWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F8EBFA32D494A61B013FC82 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43C56E2E587A40F29023D359 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				52F919C3F6A946138B32FF9F /* Sources */,
+				11949A29DFD3467BA53EAD73 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D0502EDA8D14D18B8608524 /* PBXTargetDependency */,
+				BF56CCA4C7F44CD88E8078F1 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = D22D2FF589F749D39439E1E4 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		61AEE14DAC5D4D5E91786F75 /* Pods-SNRHUDKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBAD1142D01E4A97872B93C9 /* Build configuration list for PBXNativeTarget "Pods-SNRHUDKit" */;
+			buildPhases = (
+				32F6C12E60124739ADDA6E85 /* Sources */,
+				8C8BE5F517294C9C84FD4319 /* Frameworks */,
+				E7DD1CC193C54A759CCFC18D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SNRHUDKit";
+			productName = "Pods-SNRHUDKit";
+			productReference = 67F9A758BBA948C9BB1B3171 /* libPods-SNRHUDKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E1A2D628133046479D43247A /* Pods-BFColorPickerPopover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EC97E6FBBFC4F7990FFC23B /* Build configuration list for PBXNativeTarget "Pods-BFColorPickerPopover" */;
+			buildPhases = (
+				A0EE3A60A013428DA827704F /* Sources */,
+				58DA2D03935B4737824625D6 /* Frameworks */,
+				4BACAECBB20B462D958DD019 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BFColorPickerPopover";
+			productName = "Pods-BFColorPickerPopover";
+			productReference = 5C192CC2C2154962AC4E799E /* libPods-BFColorPickerPopover.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCB7B4BE229547D795B813FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 511E958374E64C61B35B06CF /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5F822A09112945F4BDB90219;
+			productRefGroup = D8DBDB85C9E64AA7A90601C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F8EBFA32D494A61B013FC82 /* Pods */,
+				E1A2D628133046479D43247A /* Pods-BFColorPickerPopover */,
+				61AEE14DAC5D4D5E91786F75 /* Pods-SNRHUDKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32F6C12E60124739ADDA6E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70BF344188D1A9A007AB9F5 /* SNRHUDPopUpButtonCell.m in Sources */,
+				C379EB1DD5CD43CA9E779FF4 /* NSBezierPath+MCAdditions.m in Sources */,
+				619C90CF6DE347609668335A /* Pods-SNRHUDKit-dummy.m in Sources */,
+				A8B5BBEBFE1D4BAA86DC5940 /* SNRHUDButtonCell.m in Sources */,
+				95DC2E402C85408FA14ADC55 /* SNRHUDImageCell.m in Sources */,
+				DB74D2B6951B4BDA9871A505 /* SNRHUDScrollView.m in Sources */,
+				420488EAECFB4DC9B94FD750 /* SNRHUDSegmentedCell.m in Sources */,
+				41B63714C56E4A879ACED3F4 /* SNRHUDTextFieldCell.m in Sources */,
+				9C71EECD308148248C7740C0 /* SNRHUDTextView.m in Sources */,
+				06980851BA5249B98EFC4A5C /* SNRHUDWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F919C3F6A946138B32FF9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3257B23455374C8689EB97C2 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0EE3A60A013428DA827704F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB83AEFE452543C495144ACA /* BFColorPickerPopover.m in Sources */,
+				678B0D53D21F465CB5E175F4 /* BFColorPickerPopoverView.m in Sources */,
+				C215F58E3E10424A8654E348 /* BFColorPickerViewController.m in Sources */,
+				D39D0726634243FDB826379C /* BFIconTabBar.m in Sources */,
+				716EC218BE794B83902157F3 /* BFPopoverColorWell.m in Sources */,
+				74BA31CE191943198098AB6B /* NSColor+BFColorPickerPopover.m in Sources */,
+				2DFA3F7240F14A6C8144AE09 /* NSColorPanel+BFColorPickerPopover.m in Sources */,
+				B6B585462FB546949AE70A30 /* NSColorWell+BFColorPickerPopover.m in Sources */,
+				E394BE9786C942B6A1ADC345 /* Pods-BFColorPickerPopover-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D0502EDA8D14D18B8608524 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1A2D628133046479D43247A /* Pods-BFColorPickerPopover */;
+			targetProxy = 40FD10437A7043A8A3000098 /* PBXContainerItemProxy */;
+		};
+		BF56CCA4C7F44CD88E8078F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61AEE14DAC5D4D5E91786F75 /* Pods-SNRHUDKit */;
+			targetProxy = B475BAE124154689A0C3D6C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03EC994AACF44FF68375F27E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C93F1CDEC991451E8D3D8187 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		03FDDD0C04C84E0CB1787D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A3F434C4F58438E9F888BFA /* Pods-SNRHUDKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-SNRHUDKit-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3C47AB0970AD42E59DF65773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		741A2497EBD2461794C939C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 735059A6C4804B0A9921DC1D /* Pods-BFColorPickerPopover-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-BFColorPickerPopover-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9E3289F989064E819D434C1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8AE11FC77D04D38947B0AD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C93F1CDEC991451E8D3D8187 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BEFB6AC00BE94135BF51AE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A3F434C4F58438E9F888BFA /* Pods-SNRHUDKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-SNRHUDKit-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DB985E47C37E4C4E824478CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 735059A6C4804B0A9921DC1D /* Pods-BFColorPickerPopover-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-BFColorPickerPopover-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43C56E2E587A40F29023D359 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8AE11FC77D04D38947B0AD0 /* Debug */,
+				03EC994AACF44FF68375F27E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		511E958374E64C61B35B06CF /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C47AB0970AD42E59DF65773 /* Debug */,
+				9E3289F989064E819D434C1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EC97E6FBBFC4F7990FFC23B /* Build configuration list for PBXNativeTarget "Pods-BFColorPickerPopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB985E47C37E4C4E824478CB /* Debug */,
+				741A2497EBD2461794C939C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBAD1142D01E4A97872B93C9 /* Build configuration list for PBXNativeTarget "Pods-SNRHUDKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03FDDD0C04C84E0CB1787D24 /* Debug */,
+				BEFB6AC00BE94135BF51AE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCB7B4BE229547D795B813FF /* Project object */;
+}
