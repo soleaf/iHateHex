@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6D2F028B73DF45B5B4F6E1FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4276C6FC73A4C70A7956D8B /* libPods.a */; };
-		F70BF34A188D1BEE007AB9F5 /* octocat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F70BF348188D1BEE007AB9F5 /* octocat@2x.png */; };
 		F70BF34C188D1D1E007AB9F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70BF34B188D1D1E007AB9F5 /* Images.xcassets */; };
 		F7174DDB1883E59400D8F8E5 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7174DDA1883E59400D8F8E5 /* DDHotKeyCenter.m */; };
 		F7174DDD1883E6C200D8F8E5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7174DDC1883E6C200D8F8E5 /* Carbon.framework */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		A4276C6FC73A4C70A7956D8B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F70BF348188D1BEE007AB9F5 /* octocat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octocat@2x.png"; sourceTree = "<group>"; };
 		F70BF34B188D1D1E007AB9F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F7174DD91883E59400D8F8E5 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
 		F7174DDA1883E59400D8F8E5 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				F717E853187FE5E5007EF344 /* MainMenu.xib */,
 				F7A0C5E9188BFD1500186097 /* pickerGrid.png */,
 				F70BF34B188D1D1E007AB9F5 /* Images.xcassets */,
-				F70BF348188D1BEE007AB9F5 /* octocat@2x.png */,
 				F717E845187FE5E5007EF344 /* Supporting Files */,
 			);
 			path = iHateHex;
@@ -299,7 +296,6 @@
 				F70BF34C188D1D1E007AB9F5 /* Images.xcassets in Resources */,
 				F717E84F187FE5E5007EF344 /* Credits.rtf in Resources */,
 				F717E855187FE5E5007EF344 /* MainMenu.xib in Resources */,
-				F70BF34A188D1BEE007AB9F5 /* octocat@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
