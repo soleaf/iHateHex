@@ -42,3 +42,9 @@ ToDo
 - History of Copied color codes (captured)
 - More UI Impprovements For pretty
 - Screen Ruler Tool
+
+Credit
+========
+mintcode.org
+soleaf
+help@mintcode.org
