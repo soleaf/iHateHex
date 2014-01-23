@@ -3,8 +3,8 @@
 //  iHateHex
 //
 //  Created by soleaf on 1/20/14.
-//  Copyright (c) 2014 soleaf. All rights reserved.
-//
+//  Copyright (c) 2014년 soleaf. All rights reserved.
+//  https://github.com/soleaf/iHateHex/
 
 #import "ColorPickerSampleView.h"
 
@@ -21,7 +21,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
         // Initialization code here.
+    
         self.layer = _layer;
         self.wantsLayer = YES;
         self.layer.masksToBounds = YES;

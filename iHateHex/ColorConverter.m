@@ -3,8 +3,8 @@
 //  iHateHex
 //
 //  Created by soleaf on 1/12/14.
-//  Copyright (c) 2014 soleaf. All rights reserved.
-//
+//  Copyright (c) 2014년 soleaf. All rights reserved.
+//  https://github.com/soleaf/iHateHex/
 
 #import "ColorConverter.h"
 

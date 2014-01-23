@@ -4,7 +4,7 @@
 //
 //  Created by soleaf on 14. 1. 10..
 //  Copyright (c) 2014년 soleaf. All rights reserved.
-//
+//  https://github.com/soleaf/iHateHex/
 #import <Cocoa/Cocoa.h>
 #import <BFPopoverColorWell.h>
 #import "RetinaDropView.h"

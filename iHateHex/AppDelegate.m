@@ -4,7 +4,7 @@
 //
 //  Created by soleaf on 14. 1. 10..
 //  Copyright (c) 2014년 soleaf. All rights reserved.
-//
+//  https://github.com/soleaf/iHateHex/
 
 #import "AppDelegate.h"
 #import "ColorConverter.h"
@@ -36,27 +36,37 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
     
+    // Fix Window Height
     NSRect newFrame = self.window.frame;
     newFrame.size.height = 350;
     [_window setFrame:newFrame display:YES animate:NO];
     
+    // Init RetinaReduceDropView
+    // It Need some UI elements and Settings property
     self.ui_retinaReduceDropView.tipLabel = self.ui_retinaReducerTip;
     self.ui_retinaReduceDropView.settingRetinaPngQuality = self.ui_settingRetinaReducerQuality;
     self.ui_retinaReduceDropView.progressbar = self.ui_retinaReducerProgressbar;
 
+    // Load Settings
     [self loadSettings];
  
-    // ColorPicker
+    // ColorPickerImageView
     self.ui_colorPickerImageView.imageScaling = NSScaleProportionally;
     
+    // ColorPickerGridView
     self.ui_colorPickerGrid.image = [NSImage imageNamed:@"pickerGrid.png"];
+    
+    // Hokey For ScreenColorPicker
     [self registerHotKey];
+    
+    // Init ScreenColorPicker
     [self stopColorPickerView];
   
 }
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
 {
+    // Click dock icon to show Window
     [self.window makeKeyAndOrderFront:self];
     return NO;
 }
@@ -83,33 +93,24 @@
 }
 
 
-#pragma mark - Functions
-
 #pragma mark - HotKey
 - (void)registerHotKey
 {
-    
+    // CTR + OPTION + CMD + C
     colorPickerHotkeys = [[DDHotKeyCenter alloc] init];
-    if (![colorPickerHotkeys registerHotKeyWithKeyCode:kVK_ANSI_C modifierFlags:(NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask) target:self action:@selector(hotKeyCallcolorPickerPick) object:nil]) {
-        NSLog(@"unable to register hotkey");
-    } else {
-        NSLog(@"registered hotkey");
-    }
+    [colorPickerHotkeys registerHotKeyWithKeyCode:kVK_ANSI_C
+                                    modifierFlags:(NSCommandKeyMask | NSAlternateKeyMask | NSControlKeyMask)
+                                           target:self
+                                           action:@selector(hotKeyCallcolorPickerPick) object:nil];
     
 }
 
-//- (void)unregisterHotKey
-//{
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    
-//    DDHotKeyCenter * c = [[DDHotKeyCenter alloc] init];
-//	[c unregisterHotKeyWithKeyCode:[userDefaults integerForKey:kUserDefaultsKeyCode]
-//                     modifierFlags:[[userDefaults valueForKey:kUserDefaultsModifierKeys] longValue]];
-//	NSLog(@"Unregistered hotkey");
-//}
-
 - (void) copyToClipboardAt:(NSInteger) colorTextFieldTag
 {
+    
+    // After Picking color through Screen Color Picker
+    // Automatically Copy color code to clipboard by setted color code type.
+    
     NSString *targetString = nil;
     switch (colorTextFieldTag) {
         case 2:
@@ -127,11 +128,6 @@
     
     [[NSPasteboard generalPasteboard] clearContents];
     [[NSPasteboard generalPasteboard] setString:targetString  forType:NSStringPboardType];
-}
-
-- (void) hotKeyCallcolorPickerShow
-{
-    
 }
 
 - (void) hotKeyCallcolorPickerPick
@@ -185,7 +181,10 @@
 
 
 #pragma mark - Events
+
 - (IBAction)clickedReducerRevealInFinder:(id)sender {
+    
+    // Option for Reveal in Finder After reducing image.
     
     NSButton *checkButton = (NSButton*) sender;
     self.ui_retinaReduceDropView.afterRevealInFinder = checkButton.state;
@@ -196,9 +195,12 @@
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:DefaultUserKeyRetinaRevealInFinder];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
 
 - (IBAction)clickedSettingQualityPng:(id)sender {
+    
+    // Option for Retina reducing png quality
     
     NSInteger idx = self.ui_settingRetinaReducerQuality.selectedTag;
     
@@ -209,14 +211,14 @@
 
 - (IBAction)clickedSettingColorPiackerAutoCopy:(id)sender {
     
+    // Option for Screen color picker's auto copy
+    
     NSInteger idx = self.ui_settingColorPickerAutocopy.selectedTag;
     
     [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld",idx] forKey:DefaultUserKeySettingColorPickerAutoCopy];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
-
-
 
 - (IBAction)changedSegments:(id)sender {
     
@@ -225,6 +227,12 @@
 
     [self.tabView selectTabViewItemAtIndex:segmentedCtr.selectedSegment];
     
+    /*
+     Bellow blocked code is resizeing window by tab content height with animation on changing tab.
+     But It have somthing wrong sizing
+     So, Window is fixed height.
+     */
+
 //    CGFloat height = 350;
 //    switch (segmentedCtr.selectedSegment) {
 //        case 0:
@@ -267,7 +275,6 @@
     
 }
 
-
 - (IBAction)changedHexColorPicker:(id)sender {
     
     // Find New Color
@@ -280,16 +287,14 @@
     
 }
 
-
 - (IBAction)clickedCopyButton:(id)sender {
     
-    // Copy to clipboard
-    
+    // Screen Color Picker Click
+    // Copy!
     NSButton *button = (NSButton*)sender;
     [self copyToClipboardAt:button.tag];
 
 }
-
 
 - (IBAction)clickedFeedBack:(id)sender {
     
@@ -311,37 +316,44 @@
 }
 
 
-
 #pragma mark - ColorConvert
+
 
 #pragma mark - ColorPicker
 
 - (void) getMyWindowID
 {
-    // GetCurrentWIndowId
+    /*
+     Get Current Window ID
+     It need to capturing screenshot image without this window
+     */
+    
     NSArray *windowList = (__bridge NSArray *)CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
     for (NSDictionary *info in windowList) {
-        if ([[info objectForKey:(NSString *)kCGWindowOwnerName] isEqualToString:@"iHateHex"] && [[info objectForKey:(NSString *)kCGWindowName] isEqualToString:@"iHateHexColorPickerWindow"]) {
+        
+        if ([[info objectForKey:(NSString *)kCGWindowOwnerName] isEqualToString:self.window.title]
+            && [[info objectForKey:(NSString *)kCGWindowName] isEqualToString:self.colorPickerCursorView.title]) {
+            
             NSInteger exId = [[info objectForKey:(NSString *)kCGWindowNumber] integerValue];
             windowID = (uint32) exId;
-            
-            NSLog(@"info:%@",info);
+
         }
+        
     }
+    
+    
 }
 
 - (void)startColorPickerView
 {
     
-    if (![colorPickerHotkeys registerHotKeyWithKeyCode:kVK_Escape
+    // Register ESC hot key to Cancel picker
+    [colorPickerHotkeys registerHotKeyWithKeyCode:kVK_Escape
                                         modifierFlags:0
                                                target:self
-                                               action:@selector(stopColorPickerView) object:nil]) {
-        NSLog(@"unable to register hotkey");
-    } else {
-        NSLog(@"registered hotkey");
-    }
+                                                action:@selector(stopColorPickerView) object:nil];
     
+    // Show
     self.colorPickerCursorView.alphaValue = .0;
     [self.colorPickerCursorView makeKeyAndOrderFront:self];
     [NSApp activateIgnoringOtherApps:YES];
@@ -434,7 +446,8 @@
             [self.colorPickerCursorView setFrameOrigin:p];
 
             // Sampling Color
-            [self.ui_colorPickerSampleView setBackground:[ColorPicker colorAtLocation:mouseLocation excludeWindowId:windowID]];
+            [self.ui_colorPickerSampleView setBackground:
+             [ColorPicker colorAtLocation:mouseLocation excludeWindowId:windowID]];
         });
     });
     
