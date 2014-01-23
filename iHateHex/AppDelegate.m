@@ -48,6 +48,7 @@
  
     // ColorPicker
     self.ui_colorPickerImageView.imageScaling = NSScaleProportionally;
+    
     self.ui_colorPickerGrid.image = [NSImage imageNamed:@"pickerGrid.png"];
     [self registerHotKey];
     [self stopColorPickerView];
@@ -439,7 +440,6 @@
     
 
 }
-
 
 
 @end

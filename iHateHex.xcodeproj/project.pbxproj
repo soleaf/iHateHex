@@ -22,6 +22,8 @@
 		F717E867187FE5E5007EF344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F717E865187FE5E5007EF344 /* InfoPlist.strings */; };
 		F717E869187FE5E5007EF344 /* iHateHexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E868187FE5E5007EF344 /* iHateHexTests.m */; };
 		F717E89A18838DCC007EF344 /* ColorPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F717E89918838DCC007EF344 /* ColorPicker.m */; };
+		F75201301890AFEF00EA567E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F752012F1890AFEF00EA567E /* QuartzCore.framework */; };
+		F75201331890B2D900EA567E /* ColorPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F75201321890B2D900EA567E /* ColorPickerImageView.m */; };
 		F7A0C5EA188BFD1500186097 /* pickerGrid.png in Resources */ = {isa = PBXBuildFile; fileRef = F7A0C5E9188BFD1500186097 /* pickerGrid.png */; };
 		F7A0C5ED188C267500186097 /* ColorPickerSampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A0C5EC188C267500186097 /* ColorPickerSampleView.m */; };
 		F7A687AF18823AB800B55793 /* ColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A687AE18823AB800B55793 /* ColorConverter.m */; };
@@ -65,6 +67,9 @@
 		F717E868187FE5E5007EF344 /* iHateHexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHateHexTests.m; sourceTree = "<group>"; };
 		F717E89818838DCC007EF344 /* ColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPicker.h; sourceTree = "<group>"; };
 		F717E89918838DCC007EF344 /* ColorPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPicker.m; sourceTree = "<group>"; };
+		F752012F1890AFEF00EA567E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F75201311890B2D900EA567E /* ColorPickerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerImageView.h; sourceTree = "<group>"; };
+		F75201321890B2D900EA567E /* ColorPickerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerImageView.m; sourceTree = "<group>"; };
 		F7A0C5E9188BFD1500186097 /* pickerGrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerGrid.png; sourceTree = "<group>"; };
 		F7A0C5EB188C267500186097 /* ColorPickerSampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerSampleView.h; sourceTree = "<group>"; };
 		F7A0C5EC188C267500186097 /* ColorPickerSampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerSampleView.m; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75201301890AFEF00EA567E /* QuartzCore.framework in Frameworks */,
 				F7174DDD1883E6C200D8F8E5 /* Carbon.framework in Frameworks */,
 				F717E83F187FE5E5007EF344 /* Cocoa.framework in Frameworks */,
 				6D2F028B73DF45B5B4F6E1FD /* libPods.a in Frameworks */,
@@ -123,6 +129,7 @@
 		F717E83D187FE5E5007EF344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F752012F1890AFEF00EA567E /* QuartzCore.framework */,
 				F7174DDC1883E6C200D8F8E5 /* Carbon.framework */,
 				F717E83E187FE5E5007EF344 /* Cocoa.framework */,
 				F717E85D187FE5E5007EF344 /* XCTest.framework */,
@@ -194,6 +201,8 @@
 			children = (
 				F717E89818838DCC007EF344 /* ColorPicker.h */,
 				F717E89918838DCC007EF344 /* ColorPicker.m */,
+				F75201311890B2D900EA567E /* ColorPickerImageView.h */,
+				F75201321890B2D900EA567E /* ColorPickerImageView.m */,
 				F7A0C5EB188C267500186097 /* ColorPickerSampleView.h */,
 				F7A0C5EC188C267500186097 /* ColorPickerSampleView.m */,
 				F7A687AD18823AB800B55793 /* ColorConverter.h */,
@@ -350,6 +359,7 @@
 				F717E852187FE5E5007EF344 /* AppDelegate.m in Sources */,
 				F7A687AF18823AB800B55793 /* ColorConverter.m in Sources */,
 				F7EF6A10188163830078A63A /* RetinaDropView.m in Sources */,
+				F75201331890B2D900EA567E /* ColorPickerImageView.m in Sources */,
 				F717E84B187FE5E5007EF344 /* main.m in Sources */,
 				F7A0C5ED188C267500186097 /* ColorPickerSampleView.m in Sources */,
 				F7AE86D31881B23400ECFFC2 /* RetinaReducer.m in Sources */,

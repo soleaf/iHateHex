@@ -9,6 +9,7 @@
 #import <BFPopoverColorWell.h>
 #import "RetinaDropView.h"
 #import "ColorPickerSampleView.h"
+#import "ColorPickerImageView.h"
 
 static NSString* const DefaultUserKeyRetinaRevealInFinder = @"retina_reveal_in_finder";
 static NSString* const DefaultUserKeySettingRetianReducerQual = @"setting_retina_reducer_qual";
@@ -22,6 +23,7 @@ static NSString* const DefaultUserKeySettingColorPickerAutoCopy = @"setting_colo
 // Picker
 @property (unsafe_unretained) IBOutlet NSWindow *colorPickerCursorView;
 @property (weak) IBOutlet ColorPickerSampleView *ui_colorPickerSampleView;
+@property (weak) IBOutlet ColorPickerImageView *ui_colorPickerImageView;
 @property (weak) IBOutlet NSImageView *ui_colorPickerGrid;
 
 
@@ -37,7 +39,6 @@ static NSString* const DefaultUserKeySettingColorPickerAutoCopy = @"setting_colo
 @property (weak) IBOutlet NSProgressIndicator *ui_retinaReducerProgressbar;
 @property (weak) IBOutlet NSPopUpButton *ui_settingRetinaReducerQuality;
 @property (weak) IBOutlet NSPopUpButton *ui_settingColorPickerAutocopy;
-@property (weak) IBOutlet NSImageView *ui_colorPickerImageView;
 
 
 @end
