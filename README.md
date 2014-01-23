@@ -33,6 +33,5 @@ Welcome
 ToDo
 ========
 - History of Copied color code (captured)
-- More Accuracy screen color capturing preview loupe
 - More UI Impprovements For pretty
 - Screen Ruler Tool
