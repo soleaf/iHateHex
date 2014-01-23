@@ -7,6 +7,19 @@ ColorPicker, Converting(among Hex, UIColor, NSColor) and Retina Image reducer(~@
 - Converting among color codes (Hex, UIColor, NSColor)
 - Retina Image Reducer (+ Automatic renaming)
 
+![ColorCode Converter](screen_hex.png)
+
+Convert color codes
+
+![Screen Color Picker](screen_picker.png)
+
+CTR + OPTION + CMD + C -> Screen Color Picker
+(pick color code and copy to cilpboard)
+
+![Retina Image Reducer](screen_reducer.png)
+
+Retina Image(@2x file) reducer(2x size to 2x and 1x image files)
+
 Install
 ========
 1. Go to Release menu (https://github.com/soleaf/iHateHex/releases)
