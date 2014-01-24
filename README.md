@@ -1,14 +1,24 @@
 iHateHex
 ========
 
-ColorPicker, Converting(among Hex, UIColor, NSColor) and Retina Image reducer(~@2x.png)OSX App
+![iHateHex](iHateHex/Images.xcassets/AppIcon.appiconset/Icon_128x128.png)
 
--` Screen Color Capture` with loupe (`auto copy to clicpboard` after capturing with setted color code type on option pane)
+OSX App for ColorPicker, Converting(among Hex, UIColor, NSColor) and Retina Image reducer(~@2x.png)
+Although There are other commercial apps like functionall, It's entirely free :)
+
+- ` Screen Color Capture` with loupe
+	* (`auto copy to clicpboard` after capturing with setted color code type on option pane)
+
 - Converting among color codes 
 	* `Hex`, 
 	* `UIColor`
 	* `NSColor`
+
 - @2x Retina `Image Reducer` (+ Automatic renaming)
+
+
+Screenshots
+========
 
 ![ColorCode Converter](screen_hex.png)
 
