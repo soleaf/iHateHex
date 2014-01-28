@@ -54,6 +54,10 @@ ToDo
 - Screen Ruler Tool
 - Automatic updating
 
+Requirements
+============
+- OSX 10.8 or upper
+
 Credit
 ========
 mintcode.org

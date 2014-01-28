@@ -15,13 +15,12 @@
     NSMutableString *errorLog = [[NSMutableString alloc] init];
     
     // Check Destination
-    // TODO: destination folder was setted.
     NSString *destination = [self openDestinationDialog];
     if (!destination) return;
     
     
     // Check File Types
-    //TODO: ..
+    // TODO: ..
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
   
@@ -181,6 +180,11 @@
 
 - (NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize
 {
+    // SizeFix for retina
+    CGFloat screenScale = [[NSScreen mainScreen] backingScaleFactor];
+    newSize.height  *= screenScale;
+    newSize.width   *= screenScale;
+    
     NSImage *sourceImage = anImage;
     [sourceImage setScalesWhenResized:YES];
     
