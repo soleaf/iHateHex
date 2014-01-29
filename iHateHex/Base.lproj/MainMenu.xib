@@ -319,6 +319,7 @@
         <customObject id="420" customClass="NSFontManager"/>
         <window title="iHateHex" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="alertPanel" id="3Aj-KQ-hhF" customClass="SNRHUDWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" managed="YES"/>
             <windowPositionMask key="initialPositionMask" rightStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1017" y="80" width="225" height="328"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
