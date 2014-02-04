@@ -157,11 +157,29 @@
 
 - (void) saveImage:(NSImage*)image toFile:(NSString*)path
 {
-    NSData *imageData = [image TIFFRepresentation];
-    NSBitmapImageRep *rep = [NSBitmapImageRep imageRepWithData:imageData];
-    NSData *dataToWrite = [rep representationUsingType:NSPNGFileType
-                                            properties:nil];
-    [dataToWrite writeToFile:path atomically:NO];
+
+/*
+ Before Block
+ */
+//    NSData *imageData = [image TIFFRepresentation];
+//    NSBitmapImageRep *rep = [NSBitmapImageRep imageRepWithData:imageData];
+//    NSData *dataToWrite =	 [rep representationUsingType:NSPNGFileType
+//                                            properties:nil];
+//    [dataToWrite writeToFile:path atomically:YES];
+    
+/*
+ Test block
+    : Try fix issue #1 
+        https://github.com/soleaf/iHateHex/issues/1
+ */
+    CGImageRef cgRef = [image CGImageForProposedRect:NULL
+                                             context:nil
+                                               hints:nil];
+    NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
+    [newRep setSize:[image size]];   // if you want the same resolution
+    NSData *pngData = [newRep representationUsingType:NSPNGFileType properties:nil];
+    [pngData writeToFile:path atomically:YES];
+    
 }
 
 #pragma mark - Handeling Image
@@ -180,10 +198,6 @@
 
 - (NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize
 {
-    // SizeFix for retina
-    CGFloat screenScale = [[NSScreen mainScreen] backingScaleFactor];
-    newSize.height  *= screenScale;
-    newSize.width   *= screenScale;
     
     NSImage *sourceImage = anImage;
     [sourceImage setScalesWhenResized:YES];
