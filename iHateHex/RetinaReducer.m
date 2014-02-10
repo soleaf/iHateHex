@@ -36,7 +36,7 @@
                 NSString *filename = [path lastPathComponent];
                 
                 // Reduce
-                CGSize newSize = [self sizeOfRetinaImageToReduce:fullSizeImage];
+                CGSize newSize = [self sizeOfRetinaImageToReduce:path];
                 NSImage *reducedImage = [self imageResize:fullSizeImage newSize:newSize];
                 
                 if (!fullSizeImage || !reducedImage){
@@ -158,20 +158,6 @@
 - (void) saveImage:(NSImage*)image toFile:(NSString*)path
 {
 
-/*
- Before Block
- */
-//    NSData *imageData = [image TIFFRepresentation];
-//    NSBitmapImageRep *rep = [NSBitmapImageRep imageRepWithData:imageData];
-//    NSData *dataToWrite =	 [rep representationUsingType:NSPNGFileType
-//                                            properties:nil];
-//    [dataToWrite writeToFile:path atomically:YES];
-    
-/*
- Test block
-    : Try fix issue #1 
-        https://github.com/soleaf/iHateHex/issues/1
- */
     CGImageRef cgRef = [image CGImageForProposedRect:NULL
                                              context:nil
                                                hints:nil];
@@ -184,24 +170,29 @@
 
 #pragma mark - Handeling Image
 
-- (NSSize) sizeOfRetinaImageToReduce:(NSImage*)image
+- (CGSize) sizeOfRetinaImageToReduce:(NSString*)path
 {
+    /*
+     Fixed issue #1
+     : by mk_park(orcanate)
+     */
     
-    NSInteger height = image.size.height/2;
-    NSInteger width  = image.size.width/2;
+    NSArray * imageReps = [NSBitmapImageRep imageRepsWithContentsOfFile:path];
+    CGSize originalSize;
     
-    NSLog(@"origin size : %lf %lf", image.size.width, image.size.height);
-    NSLog(@"Resized : %ld %ld", width, height);
-
-    return NSMakeSize(width, height);
+    for (NSImageRep * imageRep in imageReps) {
+        if ([imageRep pixelsWide] > originalSize.width) originalSize.width = [imageRep pixelsWide];
+        if ([imageRep pixelsHigh] > originalSize.height) originalSize.height = [imageRep pixelsHigh];
+    }
+    
+    return CGSizeMake(originalSize.width / 2, originalSize.height / 2);
 }
 
 - (NSImage *)imageResize:(NSImage*)anImage newSize:(NSSize)newSize
 {
     
     NSImage *sourceImage = anImage;
-    [sourceImage setScalesWhenResized:YES];
-    
+
     // Report an error if the source isn't a valid image
     if (![sourceImage isValid])
     {
